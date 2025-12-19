@@ -42,9 +42,50 @@
   </div>
 </section>
 
+<!-- ================= DELIVERY MODEL ================= -->
+<section class="content-section bg-soft">
+  <div class="container reveal">
+
+    <h2>End-to-End Cloud Delivery</h2>
+
+    <p>
+      MyCloudSME delivers cloud programs across the full lifecycle —
+      from strategy and architecture to secure implementation, optimization,
+      and ongoing operations.
+    </p>
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        <h3>Plan</h3>
+        <p>Strategy, architecture, governance, and decision support.</p>
+      </div>
+
+      <div class="category-card">
+        <h3>Build</h3>
+        <p>Cloud foundations, platforms, applications, and automation.</p>
+      </div>
+
+      <div class="category-card">
+        <h3>Secure & Optimize</h3>
+        <p>Security, compliance, FinOps, reliability, and visibility.</p>
+      </div>
+
+      <div class="category-card">
+        <h3>Run</h3>
+        <p>Managed operations, SRE practices, and continuous improvement.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <!-- ================= SERVICES GRID ================= -->
 <section class="services-grid-section">
   <div class="container">
+
+    <h2 class="section-title reveal">Our Capabilities</h2>
 
     <div class="services-grid">
 
@@ -83,8 +124,8 @@
       <a href="services/kubernetes.html" class="service-card reveal">
         <h3>Kubernetes & Container Platforms</h3>
         <p>
-          AKS, EKS, and GKE platforms with governance, security, and observability
-          built in.
+          AKS, EKS, and GKE platforms with governance, security,
+          and observability built in.
         </p>
       </a>
 
@@ -92,39 +133,39 @@
         <h3>Cloud Security & Governance</h3>
         <p>
           Identity, policy, logging, and security baselines aligned with
-          enterprise compliance needs.
+          enterprise compliance requirements.
         </p>
       </a>
 
       <a href="services/finops.html" class="service-card reveal">
         <h3>FinOps & Cost Optimization</h3>
         <p>
-          Cost visibility, optimization programs, and executive reporting to
-          control cloud spend.
+          Cost visibility, optimization programs, and executive reporting
+          to control and reduce cloud spend.
         </p>
       </a>
 
       <a href="services/observability-sre.html" class="service-card reveal">
         <h3>Observability & SRE</h3>
         <p>
-          Monitoring, alerting, reliability engineering, and SLA-driven
-          operational models.
+          Monitoring, alerting, reliability engineering,
+          and SLA-driven operational models.
         </p>
       </a>
 
       <a href="services/managed-operations.html" class="service-card reveal">
         <h3>Managed Cloud Operations</h3>
         <p>
-          Run, operate, and continuously improve your cloud platforms
-          with enterprise support models.
+          Run, operate, and continuously improve cloud platforms
+          with enterprise-grade support models.
         </p>
       </a>
 
       <a href="services/software-development.html" class="service-card reveal">
         <h3>Custom Software Development</h3>
         <p>
-          Cloud-native applications, APIs, automation tools, and modernization
-          of existing systems.
+          Cloud-native applications, APIs, automation tools,
+          and modernization of existing systems.
         </p>
       </a>
 
@@ -133,7 +174,7 @@
   </div>
 </section>
 
-<!-- ================= SERVICE SELECTION GUIDANCE ================= -->
+<!-- ================= GUIDANCE CTA ================= -->
 <section class="guidance">
   <div class="container reveal">
 
@@ -142,7 +183,7 @@
     <p>
       Many engagements begin with a focused cloud strategy or assessment.
       We’ll help you identify the right starting point and define a clear,
-      phased delivery plan.
+      phased delivery plan aligned to your business goals.
     </p>
 
     <a href="contact.html" class="btn-primary">Book a Consultation</a>
@@ -163,7 +204,9 @@
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
   }, { threshold: 0.15 });
 
