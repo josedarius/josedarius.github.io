@@ -17,3 +17,37 @@
 .reveal:nth-child(2) { transition-delay: 0.05s; }
 .reveal:nth-child(3) { transition-delay: 0.1s; }
 .reveal:nth-child(4) { transition-delay: 0.15s; }
+.hero-visual {
+  position: relative;
+  width: 420px;
+  height: 320px;
+}
+
+.network {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.network span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #2bb0e6;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+
+.network span:nth-child(1) { top: 40%; left: 20%; animation-delay: 0s; }
+.network span:nth-child(2) { top: 20%; left: 60%; animation-delay: 1s; }
+.network span:nth-child(3) { top: 60%; left: 70%; animation-delay: 2s; }
+.network span:nth-child(4) { top: 30%; left: 40%; animation-delay: 3s; }
+.network span:nth-child(5) { top: 70%; left: 30%; animation-delay: 4s; }
+.network span:nth-child(6) { top: 50%; left: 55%; animation-delay: 5s; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
