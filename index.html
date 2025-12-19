@@ -168,43 +168,61 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Reveal animation
-  const observer = new IntersectionObserver(entries => {
+  /* ================= REVEAL ANIMATION ================= */
+  const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  document.querySelectorAll(".reveal").forEach(el =>
+    revealObserver.observe(el)
+  );
 
-  // KPI animation
-  document.querySelectorAll(".kpi-value").forEach(counter => {
-    const target = +counter.dataset.target;
-    let current = 0;
-    const step = Math.max(1, Math.floor(target / 40));
+  /* ================= KPI COUNTERS ================= */
+  const kpiObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
 
-    const animate = () => {
-      current += step;
-      if (current >= target) {
-        counter.textContent = target;
-      } else {
-        counter.textContent = current;
-        requestAnimationFrame(animate);
-      }
-    };
-    animate();
-  });
+      const counter = entry.target;
+      const target = Number(counter.dataset.target);
+      let value = 0;
+      const step = Math.max(1, Math.floor(target / 40));
 
-  // Hero parallax
+      const animate = () => {
+        value += step;
+        if (value >= target) {
+          counter.textContent = target;
+        } else {
+          counter.textContent = value;
+          requestAnimationFrame(animate);
+        }
+      };
+
+      animate();
+      kpiObserver.unobserve(counter);
+    });
+  }, { threshold: 0.6 });
+
+  document.querySelectorAll(".kpi-value").forEach(el =>
+    kpiObserver.observe(el)
+  );
+
+  /* ================= HERO PARALLAX ================= */
   document.addEventListener("mousemove", e => {
     const cloud = document.querySelector(".hero-cloud");
     if (!cloud) return;
 
     const x = (e.clientX / window.innerWidth - 0.5) * 10;
     const y = (e.clientY / window.innerHeight - 0.5) * 10;
+
     cloud.style.transform = `translate(${x}px, ${y}px)`;
   });
 </script>
+
 
 </body>
 </html>
