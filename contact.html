@@ -39,23 +39,56 @@
   </div>
 </section>
 
-<h2>Get in touch</h2>
-<p>
-  We work with enterprises globally to design, build,
-  secure, and operate cloud platforms at scale.
-</p>
+<!-- ================= CONTACT CONTENT ================= -->
+<section class="content-section">
+  <div class="container contact-grid">
 
-<p>
-  <strong>Email</strong><br />
-  info@mycloudsme.com
-</p>
+    <!-- LEFT COLUMN -->
+    <div class="contact-info reveal">
+      <h2>Get in touch</h2>
+      <p>
+        We work with enterprises globally to design, build, secure,
+        and operate cloud platforms at scale.
+      </p>
 
-<p>
-  <strong>Phone</strong><br />
-  +91 91762 00251 (India)<br />
-  +49 177 258 5993 (Germany)
-</p>
+      <p>
+        <strong>Email</strong><br />
+        info@mycloudsme.com
+      </p>
 
+      <p>
+        <strong>Phone</strong><br />
+        +91 91762 00251 (India)<br />
+        +49 177 258 5993 (Germany)
+      </p>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="contact-info reveal">
+      <h2>Global presence</h2>
+      <p>
+        MyCloudSME operates with a distributed delivery model,
+        supporting customers across regions and time zones.
+      </p>
+
+      <p>
+        <strong>Headquarters</strong><br />
+        Chennai, Tamil Nadu, India
+      </p>
+
+      <p>
+        <strong>Regional & Delivery Presence</strong><br />
+        Germany · United States · Philippines · Australia
+      </p>
+
+      <p>
+        <strong>Client Coverage</strong><br />
+        Worldwide
+      </p>
+    </div>
+
+  </div>
+</section>
 
 <!-- ================= CTA ================= -->
 <section class="cta-band">
@@ -82,9 +115,7 @@
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+      if (entry.isIntersecting) entry.target.classList.add("visible");
     });
   }, { threshold: 0.15 });
 
