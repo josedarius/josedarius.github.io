@@ -99,7 +99,7 @@
   padding: 32px;
 }
 
-/* ================= SERVICES GRID – ENTERPRISE POLISH ================= */
+/* ================= SERVICES GRID ================= */
 
 .services-grid-section {
   padding: 96px 0;
@@ -137,8 +137,10 @@
   border-radius: 18px;
   padding: 30px 26px;
 
+  text-decoration: none;
+  color: inherit;
+
   transition: all 0.28s ease;
-  cursor: pointer;
 }
 
 .service-card:hover {
@@ -159,7 +161,7 @@
   line-height: 1.55;
 }
 
-/* subtle divider line */
+/* subtle brand divider */
 .service-card::after {
   content: "";
   display: block;
