@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | MyCloudSME Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container nav">
+    <div class="brand">MyCloudSME</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="reveal">Contact</h1>
+    <p class="reveal">
+      Tell us what you’re trying to achieve — we’ll respond with a clear next-step plan,
+      recommended approach, and expected outcomes.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTACT CONTENT ================= -->
+<section class="content-section">
+  <div class="container">
+
+    <div class="contact-layout">
+
+      <!-- LEFT: FORM -->
+      <div class="contact-card reveal">
+        <h2>Send a message</h2>
+        <p class="muted">
+          Share your goals, timelines, and current environment. We’ll come back with
+          a structured proposal and recommended next steps.
+        </p>
+
+        <!-- Static-friendly form (mailto fallback) -->
+        <form class="contact-form" action="mailto:info@mycloudsme.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Company name" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" placeholder="name@company.com" required />
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="text" placeholder="+91 / +49" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="topic">What do you need help with?</label>
+            <select id="topic" name="topic">
+              <option>Cloud Strategy & Advisory</option>
+              <option>Landing Zone & Governance</option>
+              <option>Migration & Modernization</option>
+              <option>Kubernetes Platform (AKS/EKS/GKE)</option>
+              <option>DevOps / CI-CD Factory</option>
+              <option>Cloud Security Blueprint</option>
+              <option>FinOps Cost Optimization</option>
+              <option>Observability & SRE</option>
+              <option>Managed Cloud Operations</option>
+              <option>Custom Software Development</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Briefly describe your goals, constraints, timelines, and current setup." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Send Message</button>
+            <a class="btn-outline" href="mailto:info@mycloudsme.com">Email Instead</a>
+          </div>
+
+          <div class="form-note muted">
+            After you reach out, we typically respond with a short discovery call plan, key questions,
+            and a recommended delivery approach.
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: DETAILS -->
+      <div class="contact-side">
+
+        <div class="info-card reveal">
+          <h3>Contact details</h3>
+
+          <div class="info-row">
+            <div class="info-label">Email</div>
+            <div class="info-value"><a href="mailto:info@mycloudsme.com">info@mycloudsme.com</a></div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">Phone</div>
+            <div class="info-value">
+              <a href="tel:+919176200251">+91-9176200251</a> /
+              <a href="tel:+491772585993">+49-1772585993</a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">Location</div>
+            <div class="info-value">Chennai, Tamil Nadu, India</div>
+          </div>
+        </div>
+
+        <div class="info-card reveal">
+          <h3>What happens next?</h3>
+          <ul class="feature-list compact">
+            <li>We review your request and context</li>
+            <li>We schedule a short discovery discussion</li>
+            <li>We propose a delivery approach and timeline</li>
+            <li>We align on outcomes, scope, and engagement model</li>
+          </ul>
+        </div>
+
+        <div class="info-card reveal">
+          <h3>Prefer a direct call?</h3>
+          <p class="muted">
+            If you already know what you need, call or email us and we’ll route you to the right delivery team.
+          </p>
+          <div class="quick-actions">
+            <a class="btn-primary" href="mailto:info@mycloudsme.com">Email Us</a>
+            <a class="btn-outline" href="tel:+919176200251">Call +91</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>Ready to get started?</h2>
+    <p>
+      Share your goals and constraints — we’ll respond with a clear plan,
+      recommended approach, and measurable outcomes.
+    </p>
+    <a href="mailto:info@mycloudsme.com" class="btn-primary">Book a Consultation</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
