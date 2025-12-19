@@ -681,3 +681,82 @@
 @media (max-width: 900px){
   .why-proof{ grid-template-columns: 1fr; }
 }
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-soft {
+  background: #f8fafc;
+}
+.content-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.content-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.content-section p {
+  max-width: 900px;
+  line-height: 1.7;
+  color: #475569;
+}
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  max-width: 900px;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+}
+
+.checklist li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+.deliverables-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.deliverables-table th {
+  text-align: left;
+  background: #f1f5f9;
+  padding: 14px;
+  font-weight: 600;
+}
+
+.deliverables-table td {
+  padding: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.deliverables-table tr:hover {
+  background: #f9fafb;
+}
+.cta-band {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-band h2 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-band p {
+  color: #cbd5f5;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
