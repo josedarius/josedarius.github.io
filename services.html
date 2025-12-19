@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | MyCloudSME Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container nav">
+    <div class="brand">MyCloudSME</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= SERVICES HERO ================= -->
+<section class="page-hero">
+  <div class="container">
+
+    <h1 class="reveal">Our Services</h1>
+
+    <p class="reveal">
+      Enterprise cloud and software delivery services designed to modernize platforms,
+      improve security, optimize costs, and enable teams to operate at scale.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= SERVICES GRID ================= -->
+<section class="services-grid-section">
+  <div class="container">
+
+    <div class="services-grid">
+
+      <a href="services/cloud-strategy.html" class="service-card reveal">
+        <h3>Cloud Strategy & Advisory</h3>
+        <p>
+          Cloud roadmaps, target architectures, and executive decision support
+          aligned to business outcomes.
+        </p>
+      </a>
+
+      <a href="services/migration-modernization.html" class="service-card reveal">
+        <h3>Cloud Migration & Modernization</h3>
+        <p>
+          Factory-based migrations and modernization programs with controlled risk
+          and measurable progress.
+        </p>
+      </a>
+
+      <a href="services/cloud-engineering.html" class="service-card reveal">
+        <h3>Cloud Engineering (IaaS / PaaS)</h3>
+        <p>
+          Secure, scalable cloud foundations built using infrastructure as code
+          and enterprise patterns.
+        </p>
+      </a>
+
+      <a href="services/devops-platform.html" class="service-card reveal">
+        <h3>DevOps & Platform Engineering</h3>
+        <p>
+          CI/CD pipelines, platform automation, and developer enablement for
+          faster and safer delivery.
+        </p>
+      </a>
+
+      <a href="services/kubernetes.html" class="service-card reveal">
+        <h3>Kubernetes & Container Platforms</h3>
+        <p>
+          AKS, EKS, and GKE platforms with governance, security, and observability
+          built in.
+        </p>
+      </a>
+
+      <a href="services/cloud-security.html" class="service-card reveal">
+        <h3>Cloud Security & Governance</h3>
+        <p>
+          Identity, policy, logging, and security baselines aligned with
+          enterprise compliance needs.
+        </p>
+      </a>
+
+      <a href="services/finops.html" class="service-card reveal">
+        <h3>FinOps & Cost Optimization</h3>
+        <p>
+          Cost visibility, optimization programs, and executive reporting to
+          control cloud spend.
+        </p>
+      </a>
+
+      <a href="services/observability-sre.html" class="service-card reveal">
+        <h3>Observability & SRE</h3>
+        <p>
+          Monitoring, alerting, reliability engineering, and SLA-driven
+          operational models.
+        </p>
+      </a>
+
+      <a href="services/managed-operations.html" class="service-card reveal">
+        <h3>Managed Cloud Operations</h3>
+        <p>
+          Run, operate, and continuously improve your cloud platforms
+          with enterprise support models.
+        </p>
+      </a>
+
+      <a href="services/software-development.html" class="service-card reveal">
+        <h3>Custom Software Development</h3>
+        <p>
+          Cloud-native applications, APIs, automation tools, and modernization
+          of existing systems.
+        </p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SERVICE SELECTION GUIDANCE ================= -->
+<section class="guidance">
+  <div class="container reveal">
+
+    <h2>Not sure where to start?</h2>
+
+    <p>
+      Many engagements begin with a focused cloud strategy or assessment.
+      We’ll help you identify the right starting point and define a clear,
+      phased delivery plan.
+    </p>
+
+    <a href="contact.html" class="btn-primary">Book a Consultation</a>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
