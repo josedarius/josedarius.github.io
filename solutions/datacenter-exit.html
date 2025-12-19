@@ -13,18 +13,15 @@
 
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="brand">MyCloudSME</div>
-    <nav class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../services.html">Services</a>
-      <a href="../solutions.html" class="active">Solutions</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
+
+<script>
+  fetch('/partials/header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('site-header').innerHTML = html;
+    });
+</script>
 
 <section class="page-hero">
   <div class="container">
@@ -169,11 +166,15 @@
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    © <span id="year"></span> MyCloudSME Technologies Private Limited
-  </div>
-</footer>
+<div id="site-footer"></div>
+
+<script>
+  fetch('/partials/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('site-footer').innerHTML = html;
+    });
+</script>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
