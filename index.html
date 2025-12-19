@@ -313,3 +313,14 @@
 
 </body>
 </html>
+<script>
+  document.addEventListener("mousemove", e => {
+    const cloud = document.querySelector(".hero-cloud");
+    if (!cloud) return;
+
+    const x = (e.clientX / window.innerWidth - 0.5) * 10;
+    const y = (e.clientY / window.innerHeight - 0.5) * 10;
+
+    cloud.style.transform = `translate(${x}px, ${y}px)`;
+  });
+</script>
