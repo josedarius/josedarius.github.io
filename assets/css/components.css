@@ -1,0 +1,196 @@
+/* ================= HERO ================= */
+.hero {
+  padding: 120px 0 100px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f6f9fc 100%
+  );
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 52px;
+  letter-spacing: -0.8px;
+  max-width: 820px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin-top: 18px;
+}
+
+.hero-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-teal));
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.btn-outline {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+/* ================= TRUST BAR ================= */
+.trust-bar {
+  padding: 40px 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.trust-item {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================= VALUE PILLARS ================= */
+.value-pillars {
+  padding: 100px 0;
+  background: var(--bg-soft);
+}
+
+.pillars-header {
+  max-width: 700px;
+  margin-bottom: 56px;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.pillar-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+/* ================= SERVICES GRID ================= */
+.services-grid-section {
+  padding: 100px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+/* ================= HOW WE WORK ================= */
+.how-we-work {
+  padding: 100px 0;
+  background: var(--bg-soft);
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.phase {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.phase-number {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--brand-primary);
+  margin-bottom: 8px;
+}
+
+/* ================= WHY MYCLOUDSME ================= */
+.why-mycloudsme {
+  padding: 100px 0;
+}
+
+.why-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+}
+
+.metric {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.metric-value {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--brand-primary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .hero-layout,
+  .why-content {
+    grid-template-columns: 1fr;
+  }
+
+  .pillars-grid,
+  .services-grid,
+  .workflow,
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pillars-grid,
+  .services-grid,
+  .workflow,
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+}
