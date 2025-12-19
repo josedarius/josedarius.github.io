@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data Center Exit & Cloud Adoption | MyCloudSME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">MyCloudSME</div>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../solutions.html" class="active">Solutions</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="reveal">Data Center Exit & Cloud Adoption</h1>
+    <p class="reveal">
+      A structured, low-risk approach to migrate workloads
+      from on-premise environments to cloud —
+      without business disruption.
+    </p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container reveal">
+
+    <h2>The challenge</h2>
+    <p>
+      Many organizations face rising data center costs,
+      aging infrastructure, expiring contracts,
+      and limited scalability.
+    </p>
+    <p>
+      A data center exit is not just a technical migration —
+      it requires careful planning, risk management,
+      application classification, and operational readiness.
+    </p>
+
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container reveal">
+
+    <h2>Our approach</h2>
+    <p>
+      We deliver data center exits using a
+      **factory-based migration model**
+      that balances speed, stability, and modernization.
+    </p>
+
+    <ul class="bullet-list">
+      <li>Application and dependency discovery</li>
+      <li>6R classification (Rehost, Replatform, Refactor, etc.)</li>
+      <li>Landing zone and governance setup</li>
+      <li>Wave-based migration execution</li>
+      <li>Post-migration stabilization and optimization</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="how-we-deliver">
+  <div class="container">
+
+    <h2 class="section-title reveal">How we deliver</h2>
+
+    <div class="delivery-steps">
+
+      <div class="delivery-step reveal">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Discover & Assess</h3>
+          <p>
+            Inventory applications, dependencies,
+            data flows, and business criticality.
+          </p>
+        </div>
+      </div>
+
+      <div class="delivery-step reveal">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Classify & Plan</h3>
+          <p>
+            Apply the 6R model and define migration waves,
+            priorities, and risk mitigation.
+          </p>
+        </div>
+      </div>
+
+      <div class="delivery-step reveal">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Prepare Cloud Foundations</h3>
+          <p>
+            Build landing zones, networking,
+            identity, security, and governance.
+          </p>
+        </div>
+      </div>
+
+      <div class="delivery-step reveal">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3>Migrate in Waves</h3>
+          <p>
+            Execute migrations with rollback plans,
+            validation checkpoints, and stakeholder communication.
+          </p>
+        </div>
+      </div>
+
+      <div class="delivery-step reveal">
+        <div class="step-number">05</div>
+        <div class="step-content">
+          <h3>Stabilize & Optimize</h3>
+          <p>
+            Post-migration tuning, cost optimization,
+            security hardening, and operations handover.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container reveal">
+
+    <h2>Outcomes</h2>
+
+    <ul class="bullet-list">
+      <li>Reduced infrastructure and data center costs</li>
+      <li>Improved scalability and resilience</li>
+      <li>Standardized security and governance</li>
+      <li>Clear operational ownership in cloud</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>Planning a data center exit?</h2>
+    <p>
+      Let’s review your environment and define
+      a clear, low-risk migration roadmap.
+    </p>
+    <a href="../contact.html" class="btn-primary">Book a Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
+  }, { threshold: 0.15 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
