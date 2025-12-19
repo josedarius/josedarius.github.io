@@ -14,19 +14,16 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-  <div class="container nav">
-    <div class="brand">MyCloudSME</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
+
+<script>
+  fetch('/partials/header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('site-header').innerHTML = html;
+    });
+</script>
+
 
 <!-- ================= SERVICES HERO ================= -->
 <section class="page-hero">
