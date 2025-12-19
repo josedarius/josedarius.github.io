@@ -4,12 +4,14 @@
   margin: 0 auto;
 }
 
-/* HEADER */
+/* ================= HEADER / NAV ================= */
+
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: #4b4f59;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -23,14 +25,36 @@ header {
 .brand {
   font-weight: 800;
   font-size: 20px;
-  color: #0f172a;
+  letter-spacing: -0.3px;
 }
 
 .nav-links a {
   margin-left: 28px;
-  font-weight: 500;
-  color: #0f172a;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  position: relative;
 }
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--brand-primary),
+    var(--brand-teal)
+  );
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
 
 /* FOOTER */
 footer {
