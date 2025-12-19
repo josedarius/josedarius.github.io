@@ -227,11 +227,16 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer>
-  <div class="container">
-    © <span id="year"></span> MyCloudSME Technologies Private Limited
-  </div>
-</footer>
+<div id="site-footer"></div>
+
+<script>
+  fetch('/partials/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('site-footer').innerHTML = html;
+    });
+</script>
+
 
 <!-- ================= SCRIPTS ================= -->
 <script>
