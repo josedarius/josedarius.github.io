@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solutions | MyCloudSME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">MyCloudSME</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="solutions.html" class="active">Solutions</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="reveal">Solutions</h1>
+    <p class="reveal">
+      Proven cloud and platform solutions designed to solve
+      real enterprise challenges — delivered with clarity,
+      governance, and measurable outcomes.
+    </p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+
+    <div class="solutions-grid">
+
+      <a href="solutions/datacenter-exit.html" class="solution-card reveal">
+        <h3>Data Center Exit & Cloud Adoption</h3>
+        <p>
+          Migrate workloads safely from on-premise to cloud
+          using a phased, factory-based approach.
+        </p>
+      </a>
+
+      <a href="solutions/landing-zone.html" class="solution-card reveal">
+        <h3>Landing Zone & Governance at Scale</h3>
+        <p>
+          Standardize networking, identity, security,
+          and policy across multiple teams and subscriptions.
+        </p>
+      </a>
+
+      <a href="solutions/kubernetes-platform.html" class="solution-card reveal">
+        <h3>Enterprise Kubernetes Platform</h3>
+        <p>
+          Build a secure, scalable Kubernetes platform
+          that product teams can safely self-serve.
+        </p>
+      </a>
+
+      <a href="solutions/finops-cost-reduction.html" class="solution-card reveal">
+        <h3>FinOps Cost Reduction Program</h3>
+        <p>
+          Reduce cloud spend while building long-term
+          financial governance and accountability.
+        </p>
+      </a>
+
+      <a href="solutions/secure-cloud-blueprint.html" class="solution-card reveal">
+        <h3>Secure-by-Default Cloud Blueprint</h3>
+        <p>
+          Deploy compliant, audit-ready cloud foundations
+          with security embedded from day one.
+        </p>
+      </a>
+
+      <a href="solutions/cicd-factory.html" class="solution-card reveal">
+        <h3>CI/CD Factory for Product Teams</h3>
+        <p>
+          Standardize pipelines, automation, and quality gates
+          across development teams.
+        </p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>Not sure which solution fits your situation?</h2>
+    <p>
+      Tell us about your challenges and goals.
+      We’ll help you identify the right starting point.
+    </p>
+    <a href="contact.html" class="btn-primary">Book a Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
+  }, { threshold: 0.15 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
