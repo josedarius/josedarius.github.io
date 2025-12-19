@@ -650,3 +650,34 @@
     grid-template-columns: 1fr;
   }
 }
+.why-proof{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.proof-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px 22px;
+}
+
+.proof-title{
+  font-weight:800;
+  margin-bottom:12px;
+  letter-spacing:-0.2px;
+}
+
+.proof-list{
+  margin:0;
+  padding-left:18px;
+  color: var(--text-muted);
+  line-height:1.7;
+  font-size:14.5px;
+}
+
+@media (max-width: 900px){
+  .why-proof{ grid-template-columns: 1fr; }
+}
