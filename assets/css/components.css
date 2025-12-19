@@ -568,3 +568,85 @@
     justify-content: flex-start;
   }
 }
+/* ================= WHY MYCLOUDSME ================= */
+
+.why-mycloudsme {
+  padding: 100px 0;
+  background: var(--bg-soft);
+}
+
+.why-header {
+  max-width: 720px;
+  margin-bottom: 64px;
+}
+
+.why-header h2 {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.why-header p {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.why-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+}
+
+/* DIFFERENTIATORS */
+
+.why-points {
+  display: grid;
+  gap: 28px;
+}
+
+.why-point h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.why-point p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* METRICS */
+
+.why-metrics {
+  display: grid;
+  gap: 20px;
+}
+
+.metric {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px 22px;
+}
+
+.metric-value {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--brand-primary);
+}
+
+.metric-label {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .why-content {
+    grid-template-columns: 1fr;
+  }
+}
