@@ -62,26 +62,12 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container nav">
-
-    <!-- Logo -->
-    <a href="/" class="site-logo">
-      <img src="assets/images/mycloudsme-logo.png"
-           alt="MyCloudSME – Cloud Consulting & Azure Services">
-    </a>
-
-    <!-- Navigation -->
-    <nav class="nav-links">
-      <a href="services.html">Services</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
+<div id="site-header"></div>
+<script>
+  fetch('/partials/header.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('site-header').innerHTML = html; });
+</script>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
