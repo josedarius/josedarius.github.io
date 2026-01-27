@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Products | MyCloudSME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon/favicon.ico" />
+</head>
+
+<body>
+
+<div id="site-header"></div>
+<script>
+  fetch('/partials/header.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('site-header').innerHTML = html; });
+</script>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="reveal">Products</h1>
+    <p class="reveal">
+      Practical tools built by cloud architects to solve real-world governance and operations problems.
+    </p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+
+    <div class="solutions-grid">
+
+      <a href="/products/tagops.html" class="solution-card reveal">
+        <h3>TagOps</h3>
+        <p>
+          Automated Azure Tag Governance & Recovery platform.
+          Snapshot-first safety, compliance visibility, and one-click restore.
+        </p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>Want a quick demo?</h2>
+    <p>
+      We can show TagOps on a sample subscription and walk through the snapshot, compliance and restore flow.
+    </p>
+    <a href="/contact.html" class="btn-primary">Book a Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
+  }, { threshold: 0.15 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
