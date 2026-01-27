@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TagOps | MyCloudSME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="TagOps is a snapshot-first Azure Tag Governance & Recovery platform — control, comply and restore Azure tags safely across subscriptions." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon/favicon.ico" />
+</head>
+
+<body>
+
+<div id="site-header"></div>
+<script>
+  fetch('/partials/header.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('site-header').innerHTML = html; });
+</script>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="container">
+
+    <h1 class="reveal">TagOps</h1>
+
+    <p class="reveal">
+      Automated Azure Tag Governance & Recovery Platform —
+      <strong>Control</strong>. <strong>Comply</strong>. <strong>Recover</strong>.
+      Azure tagging made safe and simple.
+    </p>
+
+    <div class="hero-actions reveal" style="margin-top: 22px;">
+      <a class="btn-primary" href="/contact.html">Request a Demo</a>
+      <a class="btn-outline" href="/assets/downloads/TagOps_Tool.pdf" target="_blank" rel="noopener">Download Overview (PDF)</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="content-section">
+  <div class="container reveal">
+
+    <h2>Problem statement</h2>
+    <p>
+      Enterprises struggle with inconsistent or missing Azure tags, limited visibility into tagging compliance,
+      and no rollback mechanism when tags are modified or deleted. These gaps increase operational risk during bulk tagging,
+      create cost leakage, and introduce governance and audit risks.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= SOLUTION OVERVIEW ================= -->
+<section class="content-section bg-soft">
+  <div class="container reveal">
+
+    <h2>Solution overview</h2>
+    <p>
+      TagOps is a <strong>snapshot-first</strong> Azure Tag Governance tool that provides full visibility,
+      controlled automation, and instant recovery for Azure resource tagging — all from a single platform.
+      Built with enterprise security in mind, it enables FinOps, Cloud Operations and Security teams to maintain
+      tagging excellence without compromising on safety or control.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= KEY CAPABILITIES ================= -->
+<section class="content-section">
+  <div class="container">
+
+    <h2 class="reveal">Key capabilities</h2>
+
+    <div class="services-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+      <a class="service-card reveal" href="#snapshot">
+        <h3>Subscription Snapshot Engine</h3>
+        <p>
+          Capture full tag snapshots of Resource Groups and Resources across subscriptions.
+          Create point-in-time backups before any tagging changes.
+        </p>
+      </a>
+
+      <a class="service-card reveal" href="#compliance">
+        <h3>Compliance Dashboard</h3>
+        <p>
+          View tag coverage, identify missing tags, and monitor compliance percentage across your Azure estate.
+        </p>
+      </a>
+
+      <a class="service-card reveal" href="#excel">
+        <h3>Excel-Driven Tag Management</h3>
+        <p>
+          Export Resource Groups, update tags in Excel, preview changes, then apply safely with confidence.
+        </p>
+      </a>
+
+      <a class="service-card reveal" href="#killswitch">
+        <h3>Kill Switch (Emergency Control)</h3>
+        <p>
+          Instantly remove all tags across a subscription when needed for incident response or urgent compliance action.
+        </p>
+      </a>
+
+      <a class="service-card reveal" href="#restore">
+        <h3>One-Click Restore</h3>
+        <p>
+          Restore tags from any historical snapshot. Roll back mistakes and make bulk tagging reliable.
+        </p>
+      </a>
+
+      <a class="service-card reveal" href="#vault">
+        <h3>Secure Credential Vault</h3>
+        <p>
+          Encrypted storage of Tenant ID, Client ID, Secret, and Subscription ID aligned to enterprise security expectations.
+        </p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY DIFFERENT ================= -->
+<section class="content-section bg-soft">
+  <div class="container reveal">
+
+    <h2>Why TagOps is different</h2>
+
+    <ul class="bullet-list">
+      <li><strong>Snapshot-first architecture</strong> — safety before automation, so every change can be reversed.</li>
+      <li><strong>Full rollback & recovery</strong> — restore to any previous state with a single click.</li>
+      <li><strong>No agent installation</strong> — deploy without touching your Azure infrastructure.</li>
+      <li><strong>Flexible authentication</strong> — supports Service Principals or Managed Identity.</li>
+      <li><strong>Purpose-built</strong> for FinOps, Cloud Ops and Security teams.</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ================= DEPLOYMENT MODEL ================= -->
+<section class="content-section">
+  <div class="container reveal">
+
+    <h2>Deployment model</h2>
+
+    <table class="deliverables-table">
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Runtime</td>
+          <td>Container-based application (Docker), runs locally or in Azure environments</td>
+        </tr>
+        <tr>
+          <td>Data</td>
+          <td>No external database required — self-contained and lightweight</td>
+        </tr>
+        <tr>
+          <td>Security</td>
+          <td>Credential vault with encrypted storage for Azure access details</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+<!-- ================= IDEAL FOR ================= -->
+<section class="content-section bg-soft">
+  <div class="container reveal">
+
+    <h2>Ideal for</h2>
+
+    <ul class="bullet-list">
+      <li>Azure Cloud Architects managing complex multi-subscription environments</li>
+      <li>FinOps & Cost Optimization teams driving financial accountability</li>
+      <li>Cloud Governance & Security teams enforcing tagging policy compliance</li>
+      <li>Enterprises managing multiple Azure subscriptions at scale</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>See TagOps in action</h2>
+    <p>
+      We’ll demo the snapshot → compliance → Excel update → apply → restore workflow on a safe test subscription.
+    </p>
+    <a href="/contact.html" class="btn-primary">Request a Demo</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
+  }, { threshold: 0.15 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
