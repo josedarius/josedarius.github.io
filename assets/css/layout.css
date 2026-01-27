@@ -70,3 +70,82 @@ footer {
 section {
   display: block;
 }
+
+
+/* ================= NAV DROPDOWN (Products) ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 28px;
+}
+
+.nav-dropdown-trigger {
+  margin-left: 0 !important;
+}
+
+.nav-caret {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: 6px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 220px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 18px 40px rgba(15, 94, 138, 0.14);
+  display: none;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.nav-dropdown-menu a:hover {
+  background: rgba(31, 138, 203, 0.08);
+}
+
+/* show on hover (desktop) */
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+
+/* small tweak so the underline animation still looks nice */
+.nav-dropdown a::after {
+  bottom: -6px;
+}
+
+@media (max-width: 760px) {
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nav-links a {
+    margin-left: 0;
+  }
+  .nav-dropdown {
+    margin-left: 0;
+  }
+  .nav-dropdown-menu {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border: 1px solid var(--border);
+    margin-top: 8px;
+  }
+}
