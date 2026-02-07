@@ -5,81 +5,66 @@
   <title>Products | MyCloudSME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/base.css" />
-<link rel="stylesheet" href="/assets/css/layout.css" />
-<link rel="stylesheet" href="/assets/css/components.css" />
-<link rel="stylesheet" href="/assets/css/animations.css" />
-<link rel="icon" href="/assets/favicon/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/animations.css" />
 
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
-
-  <!-- Favicon -->
   <link rel="icon" href="/assets/favicon/favicon.ico" />
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<div id="site-header"></div>
-<script>
-  fetch('/partials/header.html')
-    .then(res => res.text())
-    .then(html => { document.getElementById('site-header').innerHTML = html; });
-</script>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/images/logo.png" alt="MyCloudSME" />
+    </a>
+    <nav class="main-nav">
+      <a href="/products.html" class="active">Products</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-<!-- ================= PAGE HERO ================= -->
+<!-- ===== HERO ===== -->
 <section class="page-hero">
   <div class="container">
     <h1 class="reveal">Products</h1>
     <p class="reveal">
-      Enterprise-grade cloud platforms built by cloud architects — focused on governance,
-      compliance, operational intelligence, and cost accountability.
+      AI-intelligent cloud governance platforms built by architects —
+      designed for real Azure estates, real controls, and real outcomes.
     </p>
   </div>
 </section>
 
-<!-- ================= PRODUCTS ================= -->
+<!-- ===== PRODUCTS ===== -->
 <section class="content-section">
   <div class="container">
 
     <div class="solutions-grid">
 
-      <!-- ===== MyOps ===== -->
-      <a href="/products/myops.html" class="solution-card reveal">
-        <span class="badge">Flagship Platform</span>
-        <h3>MyOps</h3>
-        <p>
-          Adaptive Cloud Governance & FinOps Intelligence platform for Azure.
-        </p>
-        <p class="small">
-          MyOps unifies AI-driven tagging (TagOps), governance enforcement,
-          and FinOps insights into a single operational intelligence layer —
-          designed for real enterprise environments.
-        </p>
-        <p class="small muted">
-          Governance • Compliance • FinOps • Operational Intelligence
-        </p>
-      </a>
-
-      <!-- ===== TagOps ===== -->
       <a href="/products/tagops.html" class="solution-card reveal">
-        <span class="badge subtle">Core Engine</span>
         <h3>TagOps</h3>
         <p>
-          AI-Intelligent Tagging & Compliance Engine.
+          AI-intelligent tagging and compliance engine that understands
+          how resources, teams, and costs relate — enforcing structure
+          without breaking delivery.
         </p>
-        <p class="small">
-          TagOps continuously analyses cloud resources, detects tagging gaps,
-          enforces mandatory tags, and assigns measurable tagging readiness scores
-          to support governance and FinOps use cases.
+        <span class="pill">AI Tagging • Compliance • Governance</span>
+      </a>
+
+      <a href="/products/myops.html" class="solution-card reveal">
+        <h3>MyOps</h3>
+        <p>
+          Unified cloud operational intelligence platform combining
+          TagOps, governance orchestration, and FinOps insights —
+          built for enterprise-scale Azure environments.
         </p>
-        <p class="small muted">
-          Mandatory Tags • AI Inference • Compliance Readiness
-        </p>
+        <span class="pill">Governance • FinOps • Executive Insights</span>
       </a>
 
     </div>
@@ -87,56 +72,28 @@
   </div>
 </section>
 
-<!-- ================= POSITIONING ================= -->
-<section class="content-section subtle">
-  <div class="container reveal">
-    <h2>How the products work together</h2>
-    <p>
-      <strong>TagOps</strong> acts as the AI-intelligent tagging and compliance foundation —
-      ensuring structure, ownership, and governance readiness across your cloud estate.
-    </p>
-    <p>
-      <strong>MyOps</strong> builds on TagOps by adding governance orchestration,
-      FinOps intelligence, executive dashboards, and operational insights
-      that align engineering, finance, and leadership.
-    </p>
-  </div>
-</section>
-
-<!-- ================= CTA ================= -->
+<!-- ===== CTA ===== -->
 <section class="cta-band">
   <div class="container reveal">
-    <h2>See it in action</h2>
+    <h2>See the platform in action</h2>
     <p>
-      Explore the MyOps prototype with a realistic enterprise dataset,
-      showing governance posture, tagging intelligence, and FinOps readiness.
+      Explore a realistic enterprise prototype showcasing governance,
+      tagging intelligence, and FinOps insights.
     </p>
-
     <a href="https://myops.mycloudsme.com" target="_blank" class="btn-primary">
-      Open MyOps Prototype
-    </a>
-    <a href="/contact.html" class="btn-secondary">
-      Talk to Us
+      Open MyOps Demo
     </a>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
     © <span id="year"></span> MyCloudSME Technologies Private Limited
   </div>
 </footer>
 
-<!-- ================= SCRIPTS ================= -->
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 </script>
 
 </body>
