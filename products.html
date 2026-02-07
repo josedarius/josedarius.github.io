@@ -17,6 +17,7 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <div id="site-header"></div>
 <script>
   fetch('/partials/header.html')
@@ -24,25 +25,54 @@
     .then(html => { document.getElementById('site-header').innerHTML = html; });
 </script>
 
+<!-- ================= PAGE HERO ================= -->
 <section class="page-hero">
   <div class="container">
     <h1 class="reveal">Products</h1>
     <p class="reveal">
-      Practical tools built by cloud architects to solve real-world governance and operations problems.
+      Enterprise-grade cloud platforms built by cloud architects — focused on governance,
+      compliance, operational intelligence, and cost accountability.
     </p>
   </div>
 </section>
 
+<!-- ================= PRODUCTS ================= -->
 <section class="content-section">
   <div class="container">
 
     <div class="solutions-grid">
 
+      <!-- ===== MyOps ===== -->
+      <a href="/products/myops.html" class="solution-card reveal">
+        <span class="badge">Flagship Platform</span>
+        <h3>MyOps</h3>
+        <p>
+          Adaptive Cloud Governance & FinOps Intelligence platform for Azure.
+        </p>
+        <p class="small">
+          MyOps unifies AI-driven tagging (TagOps), governance enforcement,
+          and FinOps insights into a single operational intelligence layer —
+          designed for real enterprise environments.
+        </p>
+        <p class="small muted">
+          Governance • Compliance • FinOps • Operational Intelligence
+        </p>
+      </a>
+
+      <!-- ===== TagOps ===== -->
       <a href="/products/tagops.html" class="solution-card reveal">
+        <span class="badge subtle">Core Engine</span>
         <h3>TagOps</h3>
         <p>
-          Automated Azure Tag Governance & Recovery platform.
-          Snapshot-first safety, compliance visibility, and one-click restore.
+          AI-Intelligent Tagging & Compliance Engine.
+        </p>
+        <p class="small">
+          TagOps continuously analyses cloud resources, detects tagging gaps,
+          enforces mandatory tags, and assigns measurable tagging readiness scores
+          to support governance and FinOps use cases.
+        </p>
+        <p class="small muted">
+          Mandatory Tags • AI Inference • Compliance Readiness
         </p>
       </a>
 
@@ -51,27 +81,55 @@
   </div>
 </section>
 
-<section class="cta-band">
+<!-- ================= POSITIONING ================= -->
+<section class="content-section subtle">
   <div class="container reveal">
-    <h2>Want a quick demo?</h2>
+    <h2>How the products work together</h2>
     <p>
-      We can show TagOps on a sample subscription and walk through the snapshot, compliance and restore flow.
+      <strong>TagOps</strong> acts as the AI-intelligent tagging and compliance foundation —
+      ensuring structure, ownership, and governance readiness across your cloud estate.
     </p>
-    <a href="/contact.html" class="btn-primary">Book a Consultation</a>
+    <p>
+      <strong>MyOps</strong> builds on TagOps by adding governance orchestration,
+      FinOps intelligence, executive dashboards, and operational insights
+      that align engineering, finance, and leadership.
+    </p>
   </div>
 </section>
 
+<!-- ================= CTA ================= -->
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>See it in action</h2>
+    <p>
+      Explore the MyOps prototype with a realistic enterprise dataset,
+      showing governance posture, tagging intelligence, and FinOps readiness.
+    </p>
+
+    <a href="https://myops.mycloudsme.com" target="_blank" class="btn-primary">
+      Open MyOps Prototype
+    </a>
+    <a href="/contact.html" class="btn-secondary">
+      Talk to Us
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
     © <span id="year"></span> MyCloudSME Technologies Private Limited
   </div>
 </footer>
 
+<!-- ================= SCRIPTS ================= -->
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
   }, { threshold: 0.15 });
+
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 </script>
 
