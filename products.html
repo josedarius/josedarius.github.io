@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,44 +15,29 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="/" class="logo">
-      <img src="/assets/images/logo.png" alt="MyCloudSME" />
-    </a>
-    <nav class="main-nav">
-      <a href="/products.html" class="active">Products</a>
-      <a href="/services.html">Services</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<!-- HEADER -->
+<div id="site-header"></div>
 
-<!-- ===== HERO ===== -->
 <section class="page-hero">
   <div class="container">
     <h1 class="reveal">Products</h1>
     <p class="reveal">
-      AI-intelligent cloud governance platforms built by architects —
-      designed for real Azure estates, real controls, and real outcomes.
+      AI-intelligent cloud governance platforms designed for real Azure estates,
+      real controls, and measurable outcomes.
     </p>
   </div>
 </section>
 
-<!-- ===== PRODUCTS ===== -->
 <section class="content-section">
   <div class="container">
-
     <div class="solutions-grid">
 
       <a href="/products/tagops.html" class="solution-card reveal">
         <h3>TagOps</h3>
         <p>
           AI-intelligent tagging and compliance engine that understands
-          how resources, teams, and costs relate — enforcing structure
-          without breaking delivery.
+          resource context, ownership, and cost signals — enforcing governance
+          without disrupting teams.
         </p>
         <span class="pill">AI Tagging • Compliance • Governance</span>
       </a>
@@ -61,25 +45,23 @@
       <a href="/products/myops.html" class="solution-card reveal">
         <h3>MyOps</h3>
         <p>
-          Unified cloud operational intelligence platform combining
-          TagOps, governance orchestration, and FinOps insights —
-          built for enterprise-scale Azure environments.
+          Adaptive cloud governance and FinOps intelligence platform that
+          unifies TagOps, operational controls, and executive-ready insights
+          across Azure environments.
         </p>
-        <span class="pill">Governance • FinOps • Executive Insights</span>
+        <span class="pill">Governance • FinOps • AI Intelligence</span>
       </a>
 
     </div>
-
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
 <section class="cta-band">
   <div class="container reveal">
-    <h2>See the platform in action</h2>
+    <h2>Explore a live enterprise prototype</h2>
     <p>
-      Explore a realistic enterprise prototype showcasing governance,
-      tagging intelligence, and FinOps insights.
+      See governance, tagging intelligence, and FinOps insights working together
+      on a realistic Azure tenant.
     </p>
     <a href="https://myops.mycloudsme.com" target="_blank" class="btn-primary">
       Open MyOps Demo
@@ -87,14 +69,22 @@
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    © <span id="year"></span> MyCloudSME Technologies Private Limited
-  </div>
-</footer>
+<!-- FOOTER -->
+<div id="site-footer"></div>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  fetch('/partials/header.html')
+    .then(r => r.text())
+    .then(t => document.getElementById('site-header').innerHTML = t);
+
+  fetch('/partials/footer.html')
+    .then(r => r.text())
+    .then(t => document.getElementById('site-footer').innerHTML = t);
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
+  }, { threshold: 0.15 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 </script>
 
 </body>
