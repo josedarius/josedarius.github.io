@@ -16,7 +16,13 @@
 <body>
 
 <div id="site-header"></div>
+<script>
+  fetch('/partials/header.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('site-header').innerHTML = html; });
+</script>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="container">
     <h1 class="reveal">MyOps</h1>
@@ -26,49 +32,118 @@
   </div>
 </section>
 
+<!-- INTRO -->
 <section class="content-section">
-  <div class="container content-narrow">
+  <div class="container narrow">
 
     <p class="reveal">
-      MyOps is an enterprise-grade cloud operational intelligence platform that
-      builds on TagOps to deliver governance orchestration, FinOps insights,
-      and executive-level visibility across Azure environments.
+      <strong>MyOps</strong> is an enterprise-grade cloud operational intelligence
+      platform that unifies AI-driven tagging, governance orchestration,
+      and FinOps insights into a single, coherent system.
     </p>
 
-    <h3 class="reveal">What MyOps Delivers</h3>
-    <ul class="reveal">
-      <li>Adaptive governance aligned to real organisational structures</li>
-      <li>FinOps intelligence with allocation, chargeback, and savings insights</li>
-      <li>Policy-aligned controls without disrupting delivery teams</li>
-      <li>Leadership-ready dashboards for decision-making</li>
+    <p class="reveal">
+      Built for large Azure estates, MyOps provides engineering,
+      finance, security, and leadership teams with a shared,
+      trusted view of cloud ownership, compliance posture,
+      and cost accountability.
+    </p>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="content-section soft-bg">
+  <div class="container">
+
+    <h2 class="reveal">Why Enterprises Choose MyOps</h2>
+
+    <ul class="feature-list reveal">
+      <li>Unified governance across subscriptions, regions, and environments</li>
+      <li>Clear cost ownership and chargeback readiness</li>
+      <li>Policy-aligned controls without disrupting teams</li>
+      <li>Executive-ready insights from day one</li>
+      <li>Designed to scale with complex Azure organisations</li>
     </ul>
 
-    <h3 class="reveal">Built for Enterprise Azure</h3>
-    <p class="reveal">
-      MyOps continuously adapts as your Azure environment evolves — subscriptions,
-      workloads, costs, and teams — turning operational data into intelligence.
-    </p>
+  </div>
+</section>
 
-    <div class="reveal" style="margin-top:32px;">
-      <a href="https://myops.mycloudsme.com" target="_blank" class="btn-primary">
-        Launch MyOps Prototype
-      </a>
+<!-- CAPABILITIES -->
+<section class="content-section">
+  <div class="container">
+
+    <h2 class="reveal">Platform Capabilities</h2>
+
+    <div class="card-grid">
+
+      <div class="info-card reveal">
+        <h3>TagOps Engine</h3>
+        <p>
+          AI-intelligent tagging, mandatory enforcement,
+          quality scoring, and compliance readiness —
+          forming the foundation of governance.
+        </p>
+      </div>
+
+      <div class="info-card reveal">
+        <h3>Governance & Compliance</h3>
+        <p>
+          Continuous monitoring of policy coverage,
+          drift detection, and remediation prioritisation
+          across Azure resources.
+        </p>
+      </div>
+
+      <div class="info-card reveal">
+        <h3>FinOps Intelligence</h3>
+        <p>
+          Cost allocation coverage, savings opportunities,
+          anomaly detection, and chargeback readiness
+          aligned to real organisational structures.
+        </p>
+      </div>
+
     </div>
 
   </div>
 </section>
 
-<div id="site-footer"></div>
+<!-- PHASES -->
+<section class="content-section soft-bg">
+  <div class="container narrow reveal">
+    <p>
+      <strong>Phase 1:</strong> Enterprise-realistic dataset demonstrating
+      full governance and FinOps workflows.
+      <br><br>
+      <strong>Phase 2:</strong> Seamless integration with live Azure APIs
+      without changing the user experience.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>Explore MyOps</h2>
+    <p>
+      Experience a realistic enterprise-grade prototype
+      showcasing AI-driven governance and FinOps intelligence.
+    </p>
+    <a href="https://myops.mycloudsme.com" target="_blank" class="btn-primary">
+      Open MyOps Demo
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
 
 <script>
-  fetch('/partials/header.html')
-    .then(r => r.text())
-    .then(t => document.getElementById('site-header').innerHTML = t);
-
-  fetch('/partials/footer.html')
-    .then(r => r.text())
-    .then(t => document.getElementById('site-footer').innerHTML = t);
-
+  document.getElementById("year").textContent = new Date().getFullYear();
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
   }, { threshold: 0.15 });
