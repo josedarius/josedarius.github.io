@@ -1000,3 +1000,19 @@
 .network span {
   animation-duration: 8s;
 }
+
+.nav-dropdown-menu a {
+  padding: 12px 14px;
+  line-height: 1.25;
+}
+
+.nav-dropdown-menu strong {
+  font-weight: 600;
+  display: block;
+}
+
+.nav-subtext {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
