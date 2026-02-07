@@ -16,69 +16,130 @@
 <body>
 
 <div id="site-header"></div>
+<script>
+  fetch('/partials/header.html')
+    .then(res => res.text())
+    .then(html => { document.getElementById('site-header').innerHTML = html; });
+</script>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="container">
     <h1 class="reveal">TagOps</h1>
     <p class="reveal">
-      AI-Intelligent Tagging & Compliance Engine
+      AI-Intelligent Tagging & Compliance Engine for Azure Enterprises
     </p>
   </div>
 </section>
 
+<!-- INTRO -->
 <section class="content-section">
-  <div class="container content-narrow">
+  <div class="container narrow">
 
     <p class="reveal">
-      TagOps is an AI-driven tagging and compliance engine that brings structure,
-      ownership, and governance readiness to complex Azure environments.
+      <strong>TagOps</strong> is an AI-driven tagging and compliance engine designed
+      to bring structure, ownership clarity, and governance readiness to complex
+      Azure environments.
     </p>
 
-    <h3 class="reveal">What TagOps Solves</h3>
-    <ul class="reveal">
-      <li>Inconsistent or missing tags across subscriptions</li>
+    <p class="reveal">
+      Unlike traditional rule-based tagging tools, TagOps understands how
+      subscriptions, resource groups, workloads, teams, and costs relate to each other.
+      It continuously adapts tagging logic as your cloud environment evolves —
+      without disrupting engineering teams.
+    </p>
+
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="content-section soft-bg">
+  <div class="container">
+
+    <h2 class="reveal">What TagOps Solves</h2>
+
+    <ul class="feature-list reveal">
+      <li>Inconsistent or missing tags across subscriptions and environments</li>
       <li>Lack of ownership visibility for cloud resources</li>
-      <li>Audit and compliance readiness gaps</li>
-      <li>Unreliable cost allocation caused by weak tagging</li>
+      <li>Poor audit and compliance readiness</li>
+      <li>Unreliable cost allocation caused by weak tagging foundations</li>
+      <li>Manual remediation that doesn’t scale</li>
     </ul>
 
-    <h3 class="reveal">Core Capabilities</h3>
+  </div>
+</section>
 
-    <p class="reveal">
-      <strong>Mandatory Tag Enforcement</strong><br/>
-      Dynamically enforces mandatory tags based on resource type, environment,
-      and workload context.
-    </p>
+<!-- CAPABILITIES -->
+<section class="content-section">
+  <div class="container">
 
-    <p class="reveal">
-      <strong>AI-Based Tag Recommendations</strong><br/>
-      Uses naming patterns, metadata, and usage signals to recommend
-      corrective tags at scale.
-    </p>
+    <h2 class="reveal">Core Capabilities</h2>
 
-    <p class="reveal">
-      <strong>Tagging Quality & Readiness Score</strong><br/>
-      Measures tagging maturity for governance, security, and FinOps use cases.
-    </p>
+    <div class="card-grid">
 
-    <p class="reveal">
-      TagOps forms the intelligent tagging foundation for MyOps.
-    </p>
+      <div class="info-card reveal">
+        <h3>Mandatory Tag Enforcement</h3>
+        <p>
+          Define mandatory tags that adapt dynamically based on resource type,
+          environment, workload, and organisational context.
+        </p>
+      </div>
+
+      <div class="info-card reveal">
+        <h3>AI-Based Tag Recommendations</h3>
+        <p>
+          Automatically recommends corrective tags using naming patterns,
+          metadata, usage signals, and historical behaviour.
+        </p>
+      </div>
+
+      <div class="info-card reveal">
+        <h3>Tagging Quality & Readiness Score</h3>
+        <p>
+          Measures tagging maturity across governance, security, and FinOps
+          use cases — with a clear, explainable score.
+        </p>
+      </div>
+
+    </div>
 
   </div>
 </section>
 
-<div id="site-footer"></div>
+<!-- POSITIONING -->
+<section class="content-section soft-bg">
+  <div class="container narrow reveal">
+    <p>
+      TagOps is the intelligent tagging and compliance foundation.
+      <br><br>
+      <strong>MyOps builds on TagOps</strong> by adding governance orchestration,
+      FinOps intelligence, and executive-level operational insights.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container reveal">
+    <h2>See TagOps in action</h2>
+    <p>
+      Explore how AI-driven tagging improves governance, compliance,
+      and cost accountability — without slowing delivery.
+    </p>
+    <a href="https://myops.mycloudsme.com" target="_blank" class="btn-primary">
+      View Live Prototype
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
+</footer>
 
 <script>
-  fetch('/partials/header.html')
-    .then(r => r.text())
-    .then(t => document.getElementById('site-header').innerHTML = t);
-
-  fetch('/partials/footer.html')
-    .then(r => r.text())
-    .then(t => document.getElementById('site-footer').innerHTML = t);
-
+  document.getElementById("year").textContent = new Date().getFullYear();
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => e.isIntersecting && e.target.classList.add("visible"));
   }, { threshold: 0.15 });
