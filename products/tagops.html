@@ -2,95 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>TagOps | AI-Intelligent Tagging & Compliance Engine</title>
+  <title>TagOps | MyCloudSME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/assets/css/base.css" />
-<link rel="stylesheet" href="/assets/css/layout.css" />
-<link rel="stylesheet" href="/assets/css/components.css" />
-<link rel="stylesheet" href="/assets/css/animations.css" />
-<link rel="icon" href="/assets/favicon/favicon.ico" />
 
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/animations.css" />
+
+  <link rel="icon" href="/assets/favicon/favicon.ico" />
 </head>
 
 <body>
 
-<section class="product-hero">
-  <h1>TagOps</h1>
-  <h2>AI-Intelligent Tagging & Compliance Engine</h2>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/images/logo.png" alt="MyCloudSME" />
+    </a>
+    <nav class="main-nav">
+      <a href="/products.html" class="active">Products</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <p class="lead">
-    TagOps is an AI-driven tagging and compliance engine
-    designed to bring structure, ownership, and governance readiness
-    to complex cloud environments.
-  </p>
-
-  <p>
-    Unlike traditional rule-based tagging tools,
-    TagOps understands how resources are used,
-    how teams operate, and how costs flow —
-    enabling intelligent tagging at scale.
-  </p>
+<section class="page-hero">
+  <div class="container">
+    <h1 class="reveal">TagOps</h1>
+    <p class="reveal">
+      AI-Intelligent Tagging & Compliance Engine for Azure
+    </p>
+  </div>
 </section>
 
-<section class="product-section">
-  <h3>What TagOps Solves</h3>
+<section class="content-section">
+  <div class="container">
 
-  <ul class="feature-list">
-    <li>Inconsistent and missing tags across subscriptions</li>
-    <li>Lack of ownership visibility for cloud resources</li>
-    <li>Poor compliance readiness for audits and governance</li>
-    <li>Unreliable cost allocation caused by weak tagging</li>
-  </ul>
-</section>
+    <h2>What is TagOps?</h2>
+    <p>
+      TagOps is an AI-driven tagging and compliance engine designed to
+      bring structure, ownership clarity, and governance readiness to
+      complex Azure environments — without disrupting teams or pipelines.
+    </p>
 
-<section class="product-section">
-  <h3>Core Capabilities</h3>
+    <h3>What TagOps Solves</h3>
+    <ul>
+      <li>Inconsistent and missing tags across subscriptions</li>
+      <li>Lack of ownership visibility for cloud resources</li>
+      <li>Weak audit and compliance readiness</li>
+      <li>Unreliable cost allocation due to poor tagging</li>
+    </ul>
 
-  <div class="card-grid">
+    <h3>Core Capabilities</h3>
 
-    <div class="card">
-      <h4>Mandatory Tag Enforcement</h4>
-      <p>
-        Define mandatory tags that adapt dynamically
-        based on resource type, environment, and workload context.
-      </p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h4>Mandatory Tag Enforcement</h4>
+        <p>
+          Define adaptive mandatory tags based on resource type,
+          environment, and workload context.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h4>AI-Based Tag Recommendations</h4>
+        <p>
+          Intelligent tag suggestions derived from naming patterns,
+          metadata, relationships, and usage signals.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h4>Tagging Quality Score</h4>
+        <p>
+          Measure tagging maturity and governance readiness with a
+          clear, explainable scoring model.
+        </p>
+      </div>
     </div>
 
-    <div class="card">
-      <h4>AI-Based Tag Recommendations</h4>
-      <p>
-        Automatically suggests corrective tags
-        using naming patterns, metadata, and usage signals.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Tagging Quality & Readiness Score</h4>
-      <p>
-        Measures tagging maturity and readiness
-        for governance, security, and FinOps use cases.
-      </p>
-    </div>
+    <p class="note">
+      TagOps forms the intelligent governance foundation.
+      <strong>MyOps builds on TagOps</strong> by adding FinOps intelligence
+      and executive-level operational insights.
+    </p>
 
   </div>
 </section>
 
-<section class="product-section subtle">
-  <p>
-    <strong>TagOps</strong> is the intelligent tagging and compliance foundation.
-  </p>
-  <p>
-    <strong>MyOps</strong> builds on TagOps by adding governance orchestration,
-    FinOps intelligence, and executive-level operational insights.
-  </p>
-</section>
-
-<footer class="footer">
-  <p>
-    © 2026 MyCloudSME Technologies Pvt Ltd<br />
-    <a href="https://mycloudsme.com" target="_blank">https://mycloudsme.com</a>
-  </p>
+<footer>
+  <div class="container">
+    © <span id="year"></span> MyCloudSME Technologies Private Limited
+  </div>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
