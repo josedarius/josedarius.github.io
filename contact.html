@@ -2,127 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact | MyCloudSME Technologies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
+  <title>Contact | MyCloudSME Technologies</title>
+  <meta name="description" content="Book a free 30-minute call with a MyCloudSME cloud engineer. Email info@mycloudsme.com or call our India and Germany numbers." />
+  <link rel="canonical" href="https://mycloudsme.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MyCloudSME" />
+  <meta property="og:title" content="Contact | MyCloudSME Technologies" />
+  <meta property="og:description" content="Book a free 30-minute call with a MyCloudSME cloud engineer. Email info@mycloudsme.com or call our India and Germany numbers." />
+  <meta property="og:url" content="https://mycloudsme.com/contact.html" />
+  <meta property="og:image" content="https://mycloudsme.com/assets/images/og/mycloudsme-og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
+  <meta name="theme-color" content="#06152a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/v2.css" />
+  <script>document.documentElement.classList.add('js')</script>
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<div id="site-header"></div>
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="MyCloudSME home">
+      <img src="/assets/images/mycloudsme-logo.png" alt="MyCloudSME Technologies" width="140" height="136" />
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/services.html">Services</a>
+      <a href="/solutions.html">Solutions</a>
+      <a href="/#work">Case studies</a>
+      <a href="/products.html">Products</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" aria-current="page">Contact</a>
+      <a class="btn btn-primary" href="/contact.html">Book a call</a>
+    </nav>
+  </div>
+</header>
 
-<script>
-  fetch('/partials/header.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('site-header').innerHTML = html;
-    });
-</script>
-
-
-<!-- ================= PAGE HERO ================= -->
-<section class="page-hero">
-  <div class="container">
-    <h1 class="reveal">Contact</h1>
-    <p class="reveal">
-      Reach out to MyCloudSME to discuss cloud strategy, platform modernization,
-      security, FinOps, or long-term managed operations.
-    </p>
+<main id="main">
+<section class="navy grid-bg page-hero2">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a></nav>
+    <h1>Let's talk about your cloud</h1>
+    <p class="lede">Tell us what you run today and where you want to be. You'll speak with an engineer, not a salesperson.</p>
   </div>
 </section>
 
-<!-- ================= CONTACT CONTENT ================= -->
-<section class="content-section">
-  <div class="container contact-grid">
-
-    <!-- LEFT COLUMN -->
-    <div class="contact-info reveal">
-      <h2>Get in touch</h2>
-      <p>
-        We work with enterprises globally to design, build, secure,
-        and operate cloud platforms at scale.
-      </p>
-
-      <p>
-        <strong>Email</strong><br />
-        info@mycloudsme.com
-      </p>
-
-      <p>
-        <strong>Phone</strong><br />
-        +91 91762 00251 (India)<br />
-        +49 177 258 5993 (Germany)
-      </p>
+<section class="sec lg">
+  <div class="wrap contact-wrap">
+    <div class="rv">
+      <span class="eyebrow">Book a free 30-min call</span>
+      <h2 class="h2" style="margin-top:14px">Send us a few lines. We'll set up a call.</h2>
+      <p>Email us and mention what's most useful for a first conversation:</p>
+      <ul class="bullet-list one">
+        <li>What you run today (for example VMware, Azure, AWS, or a mix)</li>
+        <li>Roughly how many servers or applications are involved</li>
+        <li>What's driving the change: cost, a contract end, performance, security or an audit</li>
+        <li>Any deadline you're working towards</li>
+      </ul>
+      <div class="hero-ctas"><a class="btn btn-primary" href="mailto:info@mycloudsme.com?subject=Book%20a%2030-min%20call">Email us to book a call <span class="arr" aria-hidden="true">→</span></a></div>
+      <p class="small">Not sure where to start? Our fixed-scope <a href="/#packages">starter packages</a> are a low-risk first step.</p>
     </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="contact-info reveal">
-      <h2>Global presence</h2>
-      <p>
-        MyCloudSME operates with a distributed delivery model,
-        supporting customers across regions and time zones.
-      </p>
-
-      <p>
-        <strong>Headquarters</strong><br />
-        Chennai, Tamil Nadu, India
-      </p>
-
-      <p>
-        <strong>Regional & Delivery Presence</strong><br />
-        Germany · United States · Philippines · Australia
-      </p>
-
-      <p>
-        <strong>Client Coverage</strong><br />
-        Worldwide
-      </p>
+    <div class="rv">
+      <div class="contact-card light-card">
+        <dl>
+          <div><dt>Email</dt><dd><a href="mailto:info@mycloudsme.com">info@mycloudsme.com</a></dd></div>
+          <div><dt>India</dt><dd><a href="tel:+919176200251">+91 91762 00251</a></dd></div>
+          <div><dt>Germany</dt><dd><a href="tel:+491772585993">+49 177 258 5993</a></dd></div>
+          <div><dt>Headquarters</dt><dd>Chennai, Tamil Nadu, India</dd></div>
+          <div><dt>Delivery network</dt><dd>Germany · United States · Philippines · Australia</dd></div>
+          <div><dt>Clients</dt><dd>Worldwide, in your time zone</dd></div>
+        </dl>
+      </div>
     </div>
-
   </div>
 </section>
+</main>
 
-<!-- ================= CTA ================= -->
-<section class="cta-band">
-  <div class="container reveal">
-    <h2>Not sure where to start?</h2>
-    <p>
-      Talk to us about your goals, constraints, and timelines.
-      We’ll help you identify the right engagement and delivery approach.
-    </p>
-    <a href="services.html" class="btn-primary">Explore Our Services</a>
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo-chip" href="/"><img src="/assets/images/mycloudsme-logo.png" alt="MyCloudSME Technologies" width="41" height="40" /></a>
+        <p style="margin-top:16px;max-width:34ch">Cloud migration, modernisation, security and FinOps. Headquartered in Chennai, working worldwide.</p>
+      </div>
+      <div><h4>Services</h4><ul><li><a href="/services/migration-modernization.html">Migration</a></li><li><a href="/services/cloud-security.html">Security</a></li><li><a href="/services/finops.html">FinOps</a></li><li><a href="/services/managed-operations.html">Managed ops</a></li><li><a href="/services.html">All services</a></li></ul></div>
+      <div><h4>Products</h4><ul><li><a href="/products/myops.html">MyOps</a></li><li><a href="/products/tagops.html">TagOps</a></li><li><a href="/products.html">Academy OS</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/#work">Case studies</a></li><li><a href="/solutions.html">Solutions</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="base">
+      <span>© <span id="yr">2026</span> MyCloudSME Technologies Private Limited</span>
+      <span>DPIIT-recognised startup · Chennai, India</span>
+    </div>
   </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<div id="site-footer"></div>
+</footer>
 
 <script>
-  fetch('/partials/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('site-footer').innerHTML = html;
-    });
+  const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}));
+  const els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(el=>io.observe(el));
+  } else els.forEach(el=>el.classList.add('in'));
+  document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
-
-
-<!-- ================= SCRIPTS ================= -->
-<script>
-  
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-</script>
-
 </body>
 </html>

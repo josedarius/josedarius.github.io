@@ -47,11 +47,12 @@
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="/services.html">Services</a>
-      <a href="#work">Case studies</a>
+      <a href="/solutions.html">Solutions</a>
+      <a href="/#work">Case studies</a>
       <a href="/products.html">Products</a>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
-      <a class="btn btn-primary" href="#contact">Book a call</a>
+      <a class="btn btn-primary" href="/contact.html">Book a call</a>
     </nav>
   </div>
 </header>
@@ -381,7 +382,7 @@
 </section>
 
 <!-- ============ ENTRY OFFERS ============ -->
-<section class="sec paper" aria-labelledby="off-h">
+<section class="sec paper" id="packages" aria-labelledby="off-h">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Start small</span>
@@ -461,7 +462,7 @@
         <span class="k">Governance &amp; FinOps</span>
         <h3>MyOps</h3>
         <p>One view of cost, compliance and governance across your Azure estate.</p>
-        <div class="links"><a href="https://myops.mycloudsme.com" target="_blank" rel="noopener">Open live demo ↗</a><a href="/products/myops.html">Learn more</a></div>
+        <div class="links"><a href="/products/myops.html">Learn more</a><a href="mailto:info@mycloudsme.com?subject=MyOps%20demo%20request">Request a demo</a></div>
       </div>
       <div class="prod rv">
         <span class="k">Tagging &amp; compliance</span>
@@ -561,8 +562,8 @@
         <p style="margin-top:16px;max-width:34ch">Cloud migration, modernisation, security and FinOps. Headquartered in Chennai, working worldwide.</p>
       </div>
       <div><h4>Services</h4><ul><li><a href="/services/migration-modernization.html">Migration</a></li><li><a href="/services/cloud-security.html">Security</a></li><li><a href="/services/finops.html">FinOps</a></li><li><a href="/services/managed-operations.html">Managed ops</a></li><li><a href="/services.html">All services</a></li></ul></div>
-      <div><h4>Products</h4><ul><li><a href="/products/myops.html">MyOps</a></li><li><a href="/products/tagops.html">TagOps</a></li><li><a href="mailto:info@mycloudsme.com?subject=Academy%20OS%20demo">Academy OS</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="#work">Case studies</a></li><li><a href="/solutions.html">Solutions</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+      <div><h4>Products</h4><ul><li><a href="/products/myops.html">MyOps</a></li><li><a href="/products/tagops.html">TagOps</a></li><li><a href="/products.html">Academy OS</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/#work">Case studies</a></li><li><a href="/solutions.html">Solutions</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
     </div>
     <div class="base">
       <span>© <span id="yr">2026</span> MyCloudSME Technologies Private Limited</span>
@@ -572,14 +573,12 @@
 </footer>
 
 <script>
-  // mobile menu
   const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
   mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}));
-  // reveal on scroll
   const els=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
     els.forEach(el=>io.observe(el));
   } else els.forEach(el=>el.classList.add('in'));
   document.getElementById('yr').textContent=new Date().getFullYear();

@@ -2,240 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About Us | MyCloudSME Technologies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
+  <title>About Us | MyCloudSME Technologies</title>
+  <meta name="description" content="MyCloudSME is an engineering-led cloud and software company headquartered in Chennai, with specialist engineers across Europe, the US and Asia-Pacific." />
+  <link rel="canonical" href="https://mycloudsme.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MyCloudSME" />
+  <meta property="og:title" content="About Us | MyCloudSME Technologies" />
+  <meta property="og:description" content="MyCloudSME is an engineering-led cloud and software company headquartered in Chennai, with specialist engineers across Europe, the US and Asia-Pacific." />
+  <meta property="og:url" content="https://mycloudsme.com/about.html" />
+  <meta property="og:image" content="https://mycloudsme.com/assets/images/og/mycloudsme-og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
+  <meta name="theme-color" content="#06152a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/v2.css" />
+  <script>document.documentElement.classList.add('js')</script>
 </head>
-
 <body>
-<div id="site-header"></div>
+<a class="skip" href="#main">Skip to content</a>
 
-<script>
-  fetch('/partials/header.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('site-header').innerHTML = html;
-    });
-</script>
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="MyCloudSME home">
+      <img src="/assets/images/mycloudsme-logo.png" alt="MyCloudSME Technologies" width="140" height="136" />
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/services.html">Services</a>
+      <a href="/solutions.html">Solutions</a>
+      <a href="/#work">Case studies</a>
+      <a href="/products.html">Products</a>
+      <a href="/about.html" aria-current="page">About</a>
+      <a href="/contact.html">Contact</a>
+      <a class="btn btn-primary" href="/contact.html">Book a call</a>
+    </nav>
+  </div>
+</header>
 
-
-
-<!-- ================= PAGE HERO ================= -->
-<section class="page-hero">
-  <div class="container">
-
-    <h1 class="reveal">About MyCloudSME Technologies</h1>
-
-    <p class="reveal">
-      An engineering-led cloud and software consulting firm delivering
-      secure, scalable, and cost-efficient platforms for enterprises.
-    </p>
-
+<main id="main">
+<section class="navy grid-bg page-hero2">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a></nav>
+    <h1>About MyCloudSME</h1>
+    <p class="lede">An engineering-led cloud and software company. Headquartered in Chennai, working with clients worldwide.</p>
   </div>
 </section>
 
-<!-- ================= WHO WE ARE ================= -->
-<section class="content-section">
-  <div class="container reveal">
-
-    <h2>Who we are</h2>
-
-    <p>
-      MyCloudSME Technologies Private Limited is a cloud and software
-      engineering consultancy focused on helping organizations
-      modernize platforms, secure their environments, optimize costs,
-      and enable high-performing delivery teams.
-    </p>
-
-    <p>
-      We operate as a collective of experienced cloud architects,
-      platform engineers, security specialists, and DevOps practitioners
-      who have delivered large-scale enterprise systems across
-      multiple industries and geographies.
-    </p>
-
-    <p>
-      Our work spans strategy, architecture, implementation, and
-      operations — ensuring that solutions are not only well-designed,
-      but also reliable, secure, and sustainable after go-live.
-    </p>
-
-  </div>
-</section>
-
-<!-- ================= OUR MISSION ================= -->
-<section class="content-section light">
-  <div class="container reveal">
-
-    <h2>Our mission</h2>
-
-    <p>
-      To help organizations adopt cloud and modern software platforms
-      with confidence — embedding security, governance, and financial
-      discipline from day one, while enabling teams to move fast and
-      deliver value.
-    </p>
-
-  </div>
-</section>
-
-<!-- ================= HOW WE OPERATE ================= -->
-<section class="content-section">
-  <div class="container">
-
-    <h2 class="reveal">How we operate</h2>
-
-    <div class="pillars-grid">
-
-      <div class="pillar-card reveal">
-        <h3>Engineering-first mindset</h3>
-        <p>
-          Our teams are hands-on engineers who design with
-          implementation and operations in mind — not slideware.
-        </p>
-      </div>
-
-      <div class="pillar-card reveal">
-        <h3>Security & governance by default</h3>
-        <p>
-          Identity, policy, logging, and compliance are embedded
-          into every platform we build — not added later.
-        </p>
-      </div>
-
-      <div class="pillar-card reveal">
-        <h3>Automation & repeatability</h3>
-        <p>
-          Infrastructure as code, CI/CD, and standardized patterns
-          ensure consistent, scalable delivery.
-        </p>
-      </div>
-
-      <div class="pillar-card reveal">
-        <h3>Outcome-driven delivery</h3>
-        <p>
-          We focus on measurable results — reliability, security,
-          cost control, and operational maturity.
-        </p>
-      </div>
-
+<section class="sec lg">
+  <div class="wrap two-col">
+    <div class="rv">
+      <span class="eyebrow">Who we are</span>
+      <h2 class="h2" style="margin-top:14px">Engineers who design, build and stay to run it.</h2>
     </div>
-
+    <div class="rv">
+      <p>MyCloudSME Technologies Private Limited is a cloud and software engineering company. We help organisations move to the cloud, modernise the applications that hold them back, secure their environments and keep costs under control.</p>
+      <p>We work as a core team in Chennai together with a network of experienced specialist engineers in Germany, the United States, the Philippines and Australia. For each engagement we bring together the people with the right skills, working in your time zone.</p>
+      <p>Our work covers the whole lifecycle: strategy, architecture, migration, software delivery and day-to-day operations. That way what we design is also what works in production.</p>
+    </div>
   </div>
 </section>
 
-<!-- ================= OUR TEAM ================= -->
-<section class="content-section light">
-  <div class="container reveal">
-
-    <h2>Our team</h2>
-
-    <p>
-      Our delivery teams consist of senior-level engineers with
-      deep experience in:
-    </p>
-
-    <ul class="feature-list">
-      <li>Cloud architecture and multi-cloud platforms (Azure, AWS, GCP)</li>
-      <li>Kubernetes and container platforms (AKS, EKS, GKE)</li>
-      <li>DevOps, CI/CD, and platform engineering</li>
-      <li>Cloud security, identity, and governance</li>
-      <li>FinOps and cloud cost optimization</li>
-      <li>Observability, SRE, and operations</li>
-      <li>Custom software and cloud-native application development</li>
+<section class="sec paper lg">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">Track record</span><h2 class="h2">What we've delivered so far.</h2></div>
+    <ul class="stat-row rv">
+      <li><b>250+</b><span>Projects delivered</span></li>
+      <li><b>600+</b><span>Workloads moved in one VMware-to-Azure programme</span></li>
+      <li><b>20+</b><span>Legacy apps modernised for one client</span></li>
+      <li><b>6×</b><span>Faster apps after modernisation</span></li>
     </ul>
-
-    <p>
-      Teams are assembled based on engagement needs, ensuring
-      the right expertise is applied at each phase of delivery.
-    </p>
-
+    <p class="rv" style="margin-top:28px"><a href="/#work">Read the case studies →</a></p>
   </div>
 </section>
 
-<!-- ================= EXPERIENCE ================= -->
-<section class="content-section">
-  <div class="container reveal">
-
-    <h2>Enterprise experience</h2>
-
-    <p>
-      Our engineers collectively bring over a decade of experience
-      delivering and operating enterprise IT platforms, including:
-    </p>
-
-    <ul class="feature-list">
-      <li>Large-scale cloud migrations and data center exits</li>
-      <li>Secure landing zones and governance frameworks</li>
-      <li>Enterprise Kubernetes and platform engineering initiatives</li>
-      <li>FinOps programs delivering sustained cost reduction</li>
-      <li>Highly available, compliance-driven production systems</li>
-    </ul>
-
+<section class="sec lg">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">How we operate</span><h2 class="h2">Four principles behind every project.</h2></div>
+    <div class="pillars-grid">
+      <div class="pillar-card rv"><h3>Engineering first</h3><p>The people who design your platform are hands-on engineers who build and run it, not slide writers.</p></div>
+      <div class="pillar-card rv"><h3>Security by default</h3><p>Identity, policy, logging and compliance are part of every platform from the first day.</p></div>
+      <div class="pillar-card rv"><h3>Everything as code</h3><p>Infrastructure, policies and pipelines are versioned and repeatable, so nothing depends on one person's memory.</p></div>
+      <div class="pillar-card rv"><h3>Measurable outcomes</h3><p>We agree on what success looks like up front: cost, performance, reliability or audit readiness.</p></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= WHY MYCLOUDSME ================= -->
-<section class="content-section light">
-  <div class="container reveal">
-
-    <h2>Why organizations choose MyCloudSME</h2>
-
-    <ul class="feature-list">
-      <li>Enterprise-grade delivery without unnecessary complexity</li>
-      <li>Strong balance of strategy, engineering, and operations</li>
-      <li>Security and governance embedded by design</li>
-      <li>Clear documentation, runbooks, and knowledge transfer</li>
-      <li>Flexible engagement models — advisory, implementation, or managed services</li>
-    </ul>
-
+<section class="sec paper lg">
+  <div class="wrap team">
+    <div class="rv">
+      <span class="eyebrow">The team</span>
+      <h2 class="h2" style="margin-top:14px">Senior specialists, assembled for each engagement.</h2>
+      <p>Our engineers bring experience across:</p>
+      <ul class="bullet-list one">
+        <li>Cloud architecture on Azure, AWS and Google Cloud</li>
+        <li>Large migrations, datacentre exits and landing zones</li>
+        <li>Kubernetes and container platforms (AKS, EKS, GKE)</li>
+        <li>DevOps, CI/CD and platform engineering</li>
+        <li>Cloud security, identity and governance</li>
+        <li>FinOps and cost optimisation</li>
+        <li>Observability, SRE and managed operations</li>
+        <li>Custom software and cloud-native applications</li>
+      </ul>
+    </div>
+    <div class="rv">
+      <div class="map">
+        <span class="eyebrow">Where we work</span>
+        <ul class="locs">
+          <li><span class="r">Chennai</span><span>Headquarters and delivery centre</span></li>
+          <li><span class="r">Germany</span><span>Specialist engineers · European time zone</span></li>
+          <li><span class="r">United States</span><span>Specialist engineers</span></li>
+          <li><span class="r">Philippines</span><span>Specialist engineers</span></li>
+          <li><span class="r">Australia</span><span>Specialist engineers</span></li>
+        </ul>
+      </div>
+      <div class="dpiit"><img src="/assets/images/DPIIT.jpeg" alt="DPIIT Startup India" width="120" height="40" /><span>Recognised startup by DPIIT, Government of India</span></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="cta-band">
-  <div class="container reveal">
-
-    <h2>Ready to work with an experienced delivery partner?</h2>
-
-    <p>
-      Let’s discuss your goals, constraints, and timelines —
-      and define a delivery approach that works in practice.
-    </p>
-
-    <a href="contact.html" class="btn-primary">Book a Consultation</a>
-
+<section class="sec lg">
+  <div class="wrap two-col">
+    <div class="rv"><span class="eyebrow">Our mission</span></div>
+    <div class="rv"><p class="mission">Help organisations adopt cloud and modern software with confidence: security, governance and cost discipline from day one, and teams that can move fast.</p></div>
   </div>
 </section>
+<section class="navy grid-bg cta lg cta-simple">
+  <div class="wrap rv">
+    <h2 class="h2">Tell us what you run today. We'll tell you what it takes to move it.</h2>
+    <p class="lede">A free 30-minute call with an engineer, not a salesperson.</p>
+    <a class="btn btn-primary" href="/contact.html">Book a free 30-min call</a>
+  </div>
+</section>
+</main>
 
-<!-- ================= FOOTER ================= -->
-<div id="site-footer"></div>
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo-chip" href="/"><img src="/assets/images/mycloudsme-logo.png" alt="MyCloudSME Technologies" width="41" height="40" /></a>
+        <p style="margin-top:16px;max-width:34ch">Cloud migration, modernisation, security and FinOps. Headquartered in Chennai, working worldwide.</p>
+      </div>
+      <div><h4>Services</h4><ul><li><a href="/services/migration-modernization.html">Migration</a></li><li><a href="/services/cloud-security.html">Security</a></li><li><a href="/services/finops.html">FinOps</a></li><li><a href="/services/managed-operations.html">Managed ops</a></li><li><a href="/services.html">All services</a></li></ul></div>
+      <div><h4>Products</h4><ul><li><a href="/products/myops.html">MyOps</a></li><li><a href="/products/tagops.html">TagOps</a></li><li><a href="/products.html">Academy OS</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/#work">Case studies</a></li><li><a href="/solutions.html">Solutions</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="base">
+      <span>© <span id="yr">2026</span> MyCloudSME Technologies Private Limited</span>
+      <span>DPIIT-recognised startup · Chennai, India</span>
+    </div>
+  </div>
+</footer>
 
 <script>
-  fetch('/partials/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('site-footer').innerHTML = html;
-    });
+  const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}));
+  const els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(el=>io.observe(el));
+  } else els.forEach(el=>el.classList.add('in'));
+  document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
-
-
-<!-- ================= SCRIPTS ================= -->
-<script>
-  
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-</script>
-
 </body>
 </html>
