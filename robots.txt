@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /preview/
 
 Sitemap: https://mycloudsme.com/sitemap.xml
