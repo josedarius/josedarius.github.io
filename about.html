@@ -77,7 +77,7 @@
       <li><b>20+</b><span>Legacy apps modernised for one client</span></li>
       <li><b>6×</b><span>Faster apps after modernisation</span></li>
     </ul>
-    <p class="rv" style="margin-top:28px"><a href="index.html#work">Read the case studies →</a></p>
+    <p class="rv" style="margin-top:28px"><a href="index.html#work">Read the case studies</a></p>
   </div>
 </section>
 
@@ -160,16 +160,6 @@
   </div>
 </footer>
 
-<script>
-  const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
-  mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}));
-  const els=document.querySelectorAll('.rv');
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-    els.forEach(el=>io.observe(el));
-  } else els.forEach(el=>el.classList.add('in'));
-  document.getElementById('yr').textContent=new Date().getFullYear();
-</script>
+<script src="assets/js/v2.js" defer></script>
 </body>
 </html>

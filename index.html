@@ -64,14 +64,17 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Enterprise cloud engineering · Azure · AWS · GCP</span>
-        <h1 id="hero-h">Any datacentre. Any cloud. <span class="hl">Migrated, modernised and run at scale.</span></h1>
+        <span class="eyebrow">Enterprise cloud engineering on Azure, AWS and Google Cloud</span>
+        <h1 id="hero-h" class="route-h"><span class="sr-only">From any datacentre to any cloud. Migrated, modernised and run at scale.</span>
+          <span class="ln" aria-hidden="true">From <span class="swap" id="sw-src">your datacentre</span></span>
+          <span class="ln" aria-hidden="true">to <span class="swap" id="sw-tgt">any cloud</span>.</span>
+          <span class="ln sub" aria-hidden="true">Migrated, modernised and run at scale.</span></h1>
         <p class="lede">MyCloudSME is an enterprise cloud engineering company. We move workloads from your datacentre or from one cloud to another, rebuild the applications that hold you back, and run the platform securely and cost-efficiently after go-live.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="#contact">Book a free 30-min call <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="#contact">Book a free 30-min call</a>
           <a class="btn btn-ghost" href="#work">See our work</a>
         </div>
-        <p class="hero-note">HQ Chennai · Engineers across Europe, US &amp; APAC · Clients worldwide</p>
+        <p class="hero-note">Headquartered in Chennai, with engineers across Europe, the US and Asia-Pacific.</p>
       </div>
 
       <!-- Migration diagram (logo motif: hexagon nodes + lines) -->
@@ -87,7 +90,7 @@
         <g font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing=".8">
           <!-- on-prem -->
           <rect x="8" y="48" width="170" height="320" rx="8" fill="rgba(10,34,64,.6)" stroke="#2a5a8c" stroke-dasharray="4 4"/>
-          <text x="22" y="72" fill="#9fb3cc">SOURCE · DC / CLOUD</text>
+          <text x="22" y="72" fill="#9fb3cc" id="dg-src">SOURCE · DATACENTRE</text>
           <g class="dg-fade" style="animation-delay:.1s">
             <g fill="rgba(31,138,203,.22)" stroke="#1f8acb"><rect x="24" y="92" width="42" height="22" rx="3"/><rect x="72" y="92" width="42" height="22" rx="3"/><rect x="120" y="92" width="42" height="22" rx="3"/><rect x="24" y="120" width="42" height="22" rx="3"/><rect x="72" y="120" width="42" height="22" rx="3"/></g>
             <g fill="rgba(27,170,143,.22)" stroke="#1baa8f"><rect x="120" y="120" width="42" height="22" rx="3"/><rect x="24" y="182" width="42" height="22" rx="3"/><rect x="72" y="182" width="42" height="22" rx="3"/><rect x="120" y="182" width="42" height="22" rx="3"/><rect x="24" y="210" width="42" height="22" rx="3"/><rect x="72" y="210" width="42" height="22" rx="3"/></g>
@@ -110,7 +113,7 @@
 
           <!-- azure landing zone -->
           <rect x="340" y="18" width="212" height="390" rx="10" fill="rgba(10,34,64,.85)" stroke="url(#g)" stroke-width="1.5"/>
-          <text x="356" y="44" fill="#e8f0fa">TARGET · AZURE / AWS / GCP</text>
+          <text x="356" y="44" fill="#e8f0fa" id="dg-tgt">TARGET · ANY CLOUD</text>
           <g stroke="#1baa8f" stroke-width="1.5" fill="none">
             <line x1="446" y1="104" x2="390" y2="214" class="dg-line" style="--len:130;animation-delay:1.4s"/>
             <line x1="446" y1="104" x2="502" y2="214" class="dg-line" style="--len:130;animation-delay:1.5s"/>
@@ -145,6 +148,11 @@
       <li class="badge"><img src="assets/images/DPIIT.jpeg" alt="DPIIT Startup India" width="100" height="34" /><span>Recognised startup<br/>Govt. of India</span></li>
     </ul>
   </div>
+</section>
+
+<!-- ============ TECH MARQUEE ============ -->
+<section class="marquee" aria-label="Technologies we work with">
+  <div class="track"><ul><li>Microsoft Azure</li><li>AWS</li><li>Google Cloud</li><li>Kubernetes</li><li>Terraform</li><li>Bicep</li><li>Azure Migrate</li><li>Azure DevOps</li><li>GitHub Actions</li><li>Entra ID</li><li>Azure Policy</li><li>FinOps</li><li>Landing zones</li><li>.NET</li><li>PHP</li><li>Observability</li></ul><ul aria-hidden="true"><li>Microsoft Azure</li><li>AWS</li><li>Google Cloud</li><li>Kubernetes</li><li>Terraform</li><li>Bicep</li><li>Azure Migrate</li><li>Azure DevOps</li><li>GitHub Actions</li><li>Entra ID</li><li>Azure Policy</li><li>FinOps</li><li>Landing zones</li><li>.NET</li><li>PHP</li><li>Observability</li></ul></div>
 </section>
 
 <!-- ============ MIGRATION PATHS ============ -->
@@ -223,7 +231,7 @@
 
     <div class="cases">
       <article class="case rv">
-        <span class="ctx">Datacentre-to-cloud migration · Europe</span>
+        <span class="ctx">Datacentre-to-cloud migration, Europe</span>
         <h3>600+ on-premises workloads migrated to Microsoft Azure in 8 months</h3>
         <div class="metrics">
           <div><b>600+</b><span>Workloads</span></div>
@@ -239,7 +247,7 @@
       </article>
 
       <article class="case rv">
-        <span class="ctx">Application modernisation · Europe</span>
+        <span class="ctx">Application modernisation, Europe</span>
         <h3>20+ legacy .NET and PHP apps rebuilt for Azure PaaS</h3>
         <div class="metrics">
           <div><b>20+</b><span>Applications</span></div>
@@ -257,7 +265,7 @@
 
     <div class="case-row">
       <article class="case rv">
-        <span class="ctx">Custom software · Education</span>
+        <span class="ctx">Custom software, education</span>
         <h3>Academy OS: one platform to run a language academy</h3>
         <dl style="margin-top:18px">
           <div><dt>Challenge</dt><dd>A language training academy was running marketing, sales, batches and staff across spreadsheets and separate tools.</dd></div>
@@ -268,7 +276,7 @@
         </ul>
       </article>
       <article class="case rv">
-        <span class="ctx">Web · Startup</span>
+        <span class="ctx">Website, startup</span>
         <h3>Company website built from scratch</h3>
         <dl style="margin-top:18px">
           <div><dt>What we did</dt><dd>A WordPress site set up end to end for a new startup: hosting, theme, content structure and launch.</dd></div>
@@ -444,7 +452,7 @@
         <div class="meta"><span>2–3 weeks</span><span>Fixed price</span></div>
         <p>On-premises or cloud-to-cloud: know exactly what it takes to move before you commit.</p>
         <ul><li>Inventory and dependency map</li><li>Wave plan and timeline</li><li>Target-cloud run-cost estimate vs. today</li><li>Target landing zone outline</li></ul>
-        <a class="btn btn-primary" href="mailto:info@mycloudsme.com?subject=Cloud%20Migration%20Assessment">Ask for a quote <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-primary" href="mailto:info@mycloudsme.com?subject=Cloud%20Migration%20Assessment">Ask for a quote</a>
       </div>
       <div class="offer rv">
         <span class="kicker">FinOps</span>
@@ -452,7 +460,7 @@
         <div class="meta"><span>2 weeks</span><span>Fixed price</span></div>
         <p>Find out where the money goes and what you can stop paying for.</p>
         <ul><li>Spend by team, app and environment</li><li>Tagging gaps and fixes</li><li>Rightsizing and reservation list</li><li>Prioritised savings plan</li></ul>
-        <a class="btn btn-ghost" href="mailto:info@mycloudsme.com?subject=Azure%20Cost%20Review">Ask for a quote <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="mailto:info@mycloudsme.com?subject=Azure%20Cost%20Review">Ask for a quote</a>
       </div>
       <div class="offer rv">
         <span class="kicker">Modernisation</span>
@@ -460,7 +468,7 @@
         <div class="meta"><span>3–4 weeks</span><span>Fixed price</span></div>
         <p>Take one or two legacy apps to Azure PaaS and measure the difference.</p>
         <ul><li>App and dependency review</li><li>Move to App Service or containers</li><li>CI/CD pipeline</li><li>Before / after performance report</li></ul>
-        <a class="btn btn-ghost" href="mailto:info@mycloudsme.com?subject=App%20Modernisation%20Sprint">Ask for a quote <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="mailto:info@mycloudsme.com?subject=App%20Modernisation%20Sprint">Ask for a quote</a>
       </div>
     </div>
   </div>
@@ -477,22 +485,22 @@
       <div class="svc-card rv">
         <span class="k">01</span><h3>Plan</h3>
         <p>Strategy, assessments and architecture that hold up in production.</p>
-        <ul><li><a href="services/cloud-strategy.html">Cloud strategy &amp; advisory <span aria-hidden="true">→</span></a></li><li><a href="solutions/datacenter-exit.html">Datacentre exit <span aria-hidden="true">→</span></a></li></ul>
+        <ul><li><a href="services/cloud-strategy.html">Cloud strategy &amp; advisory</a></li><li><a href="solutions/datacenter-exit.html">Datacentre exit</a></li></ul>
       </div>
       <div class="svc-card rv">
         <span class="k">02</span><h3>Migrate &amp; modernise</h3>
         <p>Workloads and applications moved and rebuilt for the cloud.</p>
-        <ul><li><a href="services/migration-modernization.html">Migration &amp; modernisation <span aria-hidden="true">→</span></a></li><li><a href="services/cloud-engineering.html">Cloud engineering <span aria-hidden="true">→</span></a></li><li><a href="services/kubernetes.html">Kubernetes &amp; containers <span aria-hidden="true">→</span></a></li></ul>
+        <ul><li><a href="services/migration-modernization.html">Migration &amp; modernisation</a></li><li><a href="services/cloud-engineering.html">Cloud engineering</a></li><li><a href="services/kubernetes.html">Kubernetes &amp; containers</a></li></ul>
       </div>
       <div class="svc-card rv">
         <span class="k">03</span><h3>Secure &amp; optimise</h3>
         <p>Governance, security and cost control built in, not bolted on.</p>
-        <ul><li><a href="services/cloud-security.html">Security &amp; governance <span aria-hidden="true">→</span></a></li><li><a href="services/finops.html">FinOps &amp; cost optimisation <span aria-hidden="true">→</span></a></li><li><a href="services/observability-sre.html">Observability &amp; SRE <span aria-hidden="true">→</span></a></li></ul>
+        <ul><li><a href="services/cloud-security.html">Security &amp; governance</a></li><li><a href="services/finops.html">FinOps &amp; cost optimisation</a></li><li><a href="services/observability-sre.html">Observability &amp; SRE</a></li></ul>
       </div>
       <div class="svc-card rv">
         <span class="k">04</span><h3>Build &amp; run</h3>
         <p>Pipelines, custom software and managed operations.</p>
-        <ul><li><a href="services/devops-platform.html">DevOps &amp; platforms <span aria-hidden="true">→</span></a></li><li><a href="services/software-development.html">Custom software <span aria-hidden="true">→</span></a></li><li><a href="services/managed-operations.html">Managed operations <span aria-hidden="true">→</span></a></li></ul>
+        <ul><li><a href="services/devops-platform.html">DevOps &amp; platforms</a></li><li><a href="services/software-development.html">Custom software</a></li><li><a href="services/managed-operations.html">Managed operations</a></li></ul>
       </div>
     </div>
   </div>
@@ -585,7 +593,7 @@
       <h2 id="cta-h" style="margin-top:14px">Tell us what you run today. We'll tell you what it takes to move it.</h2>
       <p class="lede">A free 30-minute call with an engineer, not a salesperson. You'll leave with a first view of the effort, risks and next steps.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="mailto:info@mycloudsme.com?subject=Book%20a%2030-min%20call">Book a free 30-min call <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-primary" href="mailto:info@mycloudsme.com?subject=Book%20a%2030-min%20call">Book a free 30-min call</a>
       </div>
     </div>
     <div class="contact-card rv">
@@ -620,16 +628,6 @@
   </div>
 </footer>
 
-<script>
-  const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
-  mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}));
-  const els=document.querySelectorAll('.rv');
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-    els.forEach(el=>io.observe(el));
-  } else els.forEach(el=>el.classList.add('in'));
-  document.getElementById('yr').textContent=new Date().getFullYear();
-</script>
+<script src="assets/js/v2.js" defer></script>
 </body>
 </html>
