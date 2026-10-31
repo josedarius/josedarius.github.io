@@ -30,7 +30,7 @@
   onScroll();
 
   /* ---- staggered children in grids ---- */
-  var groups = '.prob-grid,.cases,.case-row,.steps,.sheets,.offers,.svc,.prods,.paths,.std-list,.pillars-grid,.card-grid,.lifecycle-grid,.services-grid,.solutions-grid,.delivery-steps,.stat-row,.proof,.skills';
+  var groups = '.caps,.why,.flow5,.ps,.bigstats,.benefits,.route-steps,.trio,.practices,.prob-grid,.cases,.case-row,.steps,.sheets,.offers,.svc,.prods,.paths,.std-list,.pillars-grid,.card-grid,.lifecycle-grid,.services-grid,.solutions-grid,.delivery-steps,.stat-row,.proof,.skills';
   document.querySelectorAll(groups).forEach(function (g) {
     Array.prototype.forEach.call(g.children, function (c, i) {
       c.classList.add('rv');
@@ -59,7 +59,7 @@
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
         e.target.classList.add('in');
-        e.target.querySelectorAll('[data-count], .proof b, .stat-row b, .metrics b').forEach(countUp);
+        e.target.querySelectorAll('[data-count], .proof b, .stat-row b, .metrics b, .bigstats b').forEach(countUp);
         if (e.target.hasAttribute('data-count')) countUp(e.target);
         io.unobserve(e.target);
       });
@@ -103,43 +103,56 @@
   }
 
 
-  /* ---- signature moment: hero route typing, synced with the diagram ---- */
-  var src = document.getElementById('sw-src'), tgt = document.getElementById('sw-tgt');
-  if (src && tgt && !reduce) {
-    var routes = [
-      ['your datacentre', 'Azure', 'DATACENTRE', 'AZURE'],
-      ['VMware', 'AWS', 'VMWARE', 'AWS'],
-      ['AWS', 'Azure', 'AWS', 'AZURE'],
-      ['Hyper-V', 'Google Cloud', 'HYPER-V', 'GOOGLE CLOUD'],
-      ['Azure', 'AWS', 'AZURE', 'AWS'],
-      ['legacy apps', 'cloud-native', 'LEGACY APPS', 'PAAS / CONTAINERS']
-    ];
-    var dSrc = document.getElementById('dg-src'), dTgt = document.getElementById('dg-tgt');
-    var diagram = document.querySelector('.hero .diagram');
+  /* ---- signature moment: hero verb typing, synced with the control-plane diagram ---- */
+  var verb = document.getElementById('sw-verb');
+  var cp = document.querySelector('.diagram.cp');
+  if (verb && !reduce) {
+    var words = ['planned', 'migrated', 'modernised', 'secured', 'optimised', 'operated'];
     var wait = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
-    var erase = async function (el) {
-      el.classList.add('typing');
-      while (el.textContent.length) { el.textContent = el.textContent.slice(0, -1); await wait(28); }
+    var setNode = function (i) {
+      if (!cp) return;
+      cp.querySelectorAll('[data-node]').forEach(function (n) { n.classList.toggle('on', +n.getAttribute('data-node') === i); });
     };
-    var type = async function (el, txt) {
-      for (var i = 1; i <= txt.length; i++) { el.textContent = txt.slice(0, i); await wait(55); }
-      el.classList.remove('typing');
-    };
-    var i = 0;
     (async function loop() {
-      await wait(2600);
-      while (true) {
-        var r = routes[i % routes.length];
-        await erase(src); await type(src, r[0]);
-        await erase(tgt); await type(tgt, r[1]);
-        if (dSrc) dSrc.textContent = 'SOURCE · ' + r[2];
-        if (dTgt) dTgt.textContent = 'TARGET · ' + r[3];
-        if (diagram) { diagram.classList.remove('run'); void diagram.getBoundingClientRect(); diagram.classList.add('run'); }
-        i++;
-        await wait(3400);
+      await wait(2400);
+      for (var i = 0; ; i = (i + 1) % words.length) {
+        verb.classList.add('typing');
+        while (verb.textContent.length) { verb.textContent = verb.textContent.slice(0, -1); await wait(30); }
+        setNode(i);
+        var w = words[i];
+        for (var k = 1; k <= w.length; k++) { verb.textContent = w.slice(0, k); await wait(60); }
+        verb.classList.remove('typing');
+        await wait(2600);
       }
     })();
   }
+
+
+  /* ---- accessible tabs ---- */
+  document.querySelectorAll('[data-tabs]').forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    var select = function (t, focus) {
+      tabs.forEach(function (x) {
+        var on = x === t;
+        x.setAttribute('aria-selected', on);
+        x.tabIndex = on ? 0 : -1;
+        var p = document.getElementById(x.getAttribute('aria-controls'));
+        if (p) p.hidden = !on;
+      });
+      if (focus) t.focus();
+    };
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key, n = null;
+        if (k === 'ArrowDown' || k === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        if (k === 'ArrowUp' || k === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (k === 'Home') n = tabs[0];
+        if (k === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+  });
 
   var yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
