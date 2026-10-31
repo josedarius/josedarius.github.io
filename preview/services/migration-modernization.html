@@ -52,7 +52,7 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="../services.html">Services</a></nav>
     <h1>Cloud Migration &amp; Modernization</h1>
     <p class="lede">Structured, risk-controlled migration and modernization programs — designed to move workloads safely, modernize where it matters, and avoid costly rework after go-live.</p>
-    <div class="hero-ctas"><a class="btn btn-primary" href="../contact.html">Book a free 30-min call <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-ghost" href="../index.html#work">See our work</a></div>
+    <div class="hero-ctas"><a class="btn btn-primary" href="../contact.html">Book a free 30-min call</a><a class="btn btn-ghost" href="../index.html#work">See our work</a></div>
   </div>
 </section>
 <section class="sec lg">
@@ -267,16 +267,6 @@
   </div>
 </footer>
 
-<script>
-  const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
-  mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'});
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}));
-  const els=document.querySelectorAll('.rv');
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-    els.forEach(el=>io.observe(el));
-  } else els.forEach(el=>el.classList.add('in'));
-  document.getElementById('yr').textContent=new Date().getFullYear();
-</script>
+<script src="../assets/js/v2.js" defer></script>
 </body>
 </html>
