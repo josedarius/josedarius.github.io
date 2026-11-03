@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://mycloudsme.com/</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://mycloudsme.com/about.html</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mycloudsme.com/services.html</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mycloudsme.com/contact.html</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mycloudsme.com/</loc><lastmod>2026-11-03</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mycloudsme.com/about.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/contact.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/products.html</loc><lastmod>2026-11-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mycloudsme.com/services.html</loc><lastmod>2026-11-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mycloudsme.com/solutions.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/products/opsme.html</loc><lastmod>2026-11-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mycloudsme.com/products/tagsme.html</loc><lastmod>2026-11-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://mycloudsme.com/services/cloud-engineering.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/cloud-security.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/cloud-strategy.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/devops-platform.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/finops.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/kubernetes.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/managed-operations.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/migration-modernization.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/observability-sre.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/services/software-development.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/solutions/cicd-factory.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/solutions/datacenter-exit.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/solutions/finops-cost-reduction.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/solutions/kubernetes-platform.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/solutions/landing-zone.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mycloudsme.com/solutions/secure-cloud-blueprint.html</loc><lastmod>2026-11-03</lastmod><priority>0.8</priority></url>
 </urlset>

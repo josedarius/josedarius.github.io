@@ -51,7 +51,7 @@ FOOTER = '''<!-- ============ FOOTER ============ -->
         <p style="margin-top:16px;max-width:34ch">Cloud migration, modernisation, security and FinOps. Headquartered in Chennai, working worldwide.</p>
       </div>
       <div><h4>Services</h4><ul><li><a href="/services/migration-modernization.html">Migration</a></li><li><a href="/services/cloud-security.html">Security</a></li><li><a href="/services/finops.html">FinOps</a></li><li><a href="/services/managed-operations.html">Managed ops</a></li><li><a href="/services.html">All services</a></li></ul></div>
-      <div><h4>Products</h4><ul><li><a href="/products/myops.html">MyOps</a></li><li><a href="/products/tagops.html">TagOps</a></li><li><a href="/products.html">Academy OS</a></li></ul></div>
+      <div><h4>Products</h4><ul><li><a href="/products/opsme.html">OpsME</a></li><li><a href="/products/tagsme.html">TagsME</a></li><li><a href="/products.html">Academy OS</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/#work">Case studies</a></li><li><a href="/solutions.html">Solutions</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
     </div>
     <div class="base">
