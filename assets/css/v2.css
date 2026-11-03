@@ -672,7 +672,7 @@ html:not(.js) .tab-panel[hidden]{display:block;margin-top:16px}
 @media (max-width:560px){.route-steps{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.chain li,.chain li::after,.qlist li,.arch .pkt,.s-over{animation:none!important}}
 
-/* TagOps components */
+/* TagsME components */
 .ps{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .ps-card{border-radius:16px;padding:36px;border:1px solid var(--line);position:relative;overflow:hidden}
 .ps-problem{background:var(--paper)}
@@ -720,3 +720,14 @@ html:not(.js) .tab-panel[hidden]{display:block;margin-top:16px}
 .chain li{padding:10px 15px;font-size:14.5px;margin-right:26px}
 .chain li:not(:last-child)::after{width:26px}
 .ph-viz{max-width:540px;justify-self:end;width:100%}@media (max-width:960px){.ph-viz{justify-self:start}}
+
+/* product brand logos (OpsME, TagsME) */
+.prod-logo{display:block;height:64px;width:auto;margin-top:22px}
+.page-hero2 .prod-logo + h1{margin-top:18px}
+.card-logo{margin:0;line-height:0}
+.card-logo img{height:46px;width:auto;display:block}
+.prod .card-logo{margin-top:12px}
+.solution-card .card-logo img{height:44px}
+.ftr-prod{display:inline-flex!important;align-items:center;gap:8px}
+.ftr-prod img{width:18px;height:18px;flex:none}
+@media (max-width:600px){.prod-logo{height:52px}}

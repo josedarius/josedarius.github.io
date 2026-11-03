@@ -206,7 +206,7 @@ def software():
     return frame("BUILD · CLOUD-NATIVE APP", "".join(b), "Animated code editor building a cloud-native application screen")
 
 
-def myops():
+def opsme():
     b = []
     for i, (lab, col) in enumerate([("SPEND", B), ("FORECAST", T), ("RISK", "#e3a008"), ("SAVED", G)]):
         x = 28 + i * 108
@@ -223,10 +223,10 @@ def myops():
         b.append(f'<g class="v-pop" style="--t:8s;--d:{1+i*0.4:.1f}s"><rect x="302" y="{y}" width="138" height="22" rx="5" fill="#0f2d52"/>'
                  f'<rect x="310" y="{y+8}" width="50" height="6" rx="3" fill="{M}"/><rect x="370" y="{y+4}" width="62" height="14" rx="7" fill="{col}" fill-opacity=".25" stroke="{col}"/>'
                  f'<text x="401" y="{y+14}" fill="{W}" font-size="7.5" text-anchor="middle">{c}</text></g>')
-    return frame("MYOPS · EXECUTIVE VIEW", "".join(b), "Animated MyOps dashboard showing spend, forecast, risk, savings, cost by application and an action queue")
+    return frame("OPSME · EXECUTIVE VIEW", "".join(b), "Animated OpsME dashboard showing spend, forecast, risk, savings, cost by application and an action queue")
 
 
-def tagops():
+def tagsme():
     b = [f'<rect x="28" y="62" width="300" height="214" rx="8" fill="{N}" stroke="#16406e"/>' + txt(40, 82, "RESOURCE GROUPS", size=8.5)]
     tags = ["owner", "cost", "env", "app"]
     for r in range(5):
@@ -245,7 +245,7 @@ def tagops():
     for i, (s, x) in enumerate(steps):
         b.append(hexn(x, 310, 12, stroke=[B, B, T, T, G][i]) + txt(x, 336, s, fill=W, size=8, anchor="middle"))
     b.append(f'<circle r="5" fill="#fff" class="v-move" style="offset-path:path(\'M60 310 H420\');--t:5s;filter:drop-shadow(0 0 6px {T})"/>')
-    return frame("TAGOPS · SNAPSHOT-FIRST", "".join(b), "Animated TagOps view: tags are applied to resource groups, coverage rises, with snapshot and restore steps")
+    return frame("TAGSME · SNAPSHOT-FIRST", "".join(b), "Animated TagsME view: tags are applied to resource groups, coverage rises, with snapshot and restore steps")
 
 
 SCENES = {
@@ -258,7 +258,7 @@ SCENES = {
     "solutions/kubernetes-platform.html": kubernetes, "solutions/finops-cost-reduction.html": finops,
     "solutions/secure-cloud-blueprint.html": security, "solutions/cicd-factory.html": devops,
     "services.html": None, "solutions.html": None,
-    "products/myops.html": myops, "products/tagops.html": tagops,
+    "products/opsme.html": opsme, "products/tagsme.html": tagsme,
 }
 
 if __name__ == "__main__":
