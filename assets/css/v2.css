@@ -731,3 +731,10 @@ html:not(.js) .tab-panel[hidden]{display:block;margin-top:16px}
 .ftr-prod{display:inline-flex!important;align-items:center;gap:8px}
 .ftr-prod img{width:18px;height:18px;flex:none}
 @media (max-width:600px){.prod-logo{height:52px}}
+
+/* company logo (cropped vector) */
+.brand img{height:44px;width:auto;display:block}
+.ftr-logo{display:inline-block}
+.ftr-logo img{height:48px;width:auto;display:block}
+@media (max-width:480px){.brand img{height:38px}}
+@media (min-width:901px){.brand img{height:48px}}
